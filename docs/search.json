@@ -9,8 +9,29 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Elijah",
     "section": "",
-    "text": "About this site"
+    "text": "Elijah is a college student"
+  },
+  {
+    "objectID": "about.html#basic-info",
+    "href": "about.html#basic-info",
+    "title": "About Elijah",
+    "section": "",
+    "text": "Elijah is a college student"
+  },
+  {
+    "objectID": "about.html#blah",
+    "href": "about.html#blah",
+    "title": "About Elijah",
+    "section": "Blah",
+    "text": "Blah"
+  },
+  {
+    "objectID": "about.html#blah-1",
+    "href": "about.html#blah-1",
+    "title": "About Elijah",
+    "section": "Blah",
+    "text": "Blah"
   }
 ]
