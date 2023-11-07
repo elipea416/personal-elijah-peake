@@ -4,6 +4,7 @@ project:
 
 website:
   title: "Elijah Peake's Website Warmup"
+  site-path: "/warmup-elijah-peake/"
   navbar:
     left:
       - href: index.qmd
