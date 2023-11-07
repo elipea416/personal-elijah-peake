@@ -1,0 +1,7 @@
+---
+title: "Making a Table"
+---
+
+## Intro to the problem
+This essay will explain a JavaScript code snippet that populates an HTML table with artist data. The code snippet provided demonstrates how to use JavaScript to select an HTML table and dynamically insert rows of artist information into it. 
+

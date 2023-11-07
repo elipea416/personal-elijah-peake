@@ -3,12 +3,13 @@ title: "About Elijah"
 ---
 
 ## Basic Info
-Elijah is a college student
+I am a Sophmore at Georgetown College making a website for CSC324.
 
 
 
-## Blah 
+
+## 
 
 
 
-## Blah
+## 

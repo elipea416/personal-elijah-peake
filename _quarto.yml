@@ -3,17 +3,32 @@ project:
   output-dir: docs
 
 website:
-  title: "warmup-elijah-peake"
+  title: "Elijah Peake's Website Warmup"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - href: about.qmd
         text: About 
+      - href: articles/index.qmd
+        text: Articles
+ 
+  sidebar:
+    - id: articles
+      title: "Articles"
+      style: "docked"
+      background: light
+      collapse-level: 2
+      contents:
+       - text: "Making a Table"
+         href: articles/article_01.qmd
+       - text: "Sorting a Table"
+         href: articles/article_02.qmd
+
 
 format:
   html:
-    theme: cosmo
+    theme: flatly
     css: styles.css
     toc: true
 

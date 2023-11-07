@@ -1,7 +1,9 @@
 ---
-title: "warmup-elijah-peake"
+title: "Hello!"
 ---
 
-This is a Quarto website.
+Introducing my warmup website. This site is for an assignment in the CSC324 class at Georgetown College.
+
+
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.

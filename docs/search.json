@@ -2,36 +2,43 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "warmup-elijah-peake",
+    "title": "Hello!",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Introducing my warmup website. This site is for an assignment in the CSC324 class at Georgetown College.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About Elijah",
     "section": "",
-    "text": "Elijah is a college student"
+    "text": "I am a Sophmore at Georgetown College making a website for CSC324."
   },
   {
     "objectID": "about.html#basic-info",
     "href": "about.html#basic-info",
     "title": "About Elijah",
     "section": "",
-    "text": "Elijah is a college student"
+    "text": "I am a Sophmore at Georgetown College making a website for CSC324."
   },
   {
-    "objectID": "about.html#blah",
-    "href": "about.html#blah",
-    "title": "About Elijah",
-    "section": "Blah",
-    "text": "Blah"
+    "objectID": "articles/article_01.html",
+    "href": "articles/article_01.html",
+    "title": "Making a Table",
+    "section": "",
+    "text": "This essay will explain a JavaScript code snippet that populates an HTML table with artist data. The code snippet provided demonstrates how to use JavaScript to select an HTML table and dynamically insert rows of artist information into it."
   },
   {
-    "objectID": "about.html#blah-1",
-    "href": "about.html#blah-1",
-    "title": "About Elijah",
-    "section": "Blah",
-    "text": "Blah"
+    "objectID": "articles/article_01.html#intro-to-the-problem",
+    "href": "articles/article_01.html#intro-to-the-problem",
+    "title": "Making a Table",
+    "section": "",
+    "text": "This essay will explain a JavaScript code snippet that populates an HTML table with artist data. The code snippet provided demonstrates how to use JavaScript to select an HTML table and dynamically insert rows of artist information into it."
+  },
+  {
+    "objectID": "articles/index.html",
+    "href": "articles/index.html",
+    "title": "Articles",
+    "section": "",
+    "text": "Article 1\n\n\nArticle 2\n\nThe articles on this site are made using javascript and are completed homework assignments from CSC324."
   }
 ]
