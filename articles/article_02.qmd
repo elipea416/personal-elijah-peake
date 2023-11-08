@@ -68,9 +68,10 @@ function randomizeOrder() {
 }
 ```
 
-## Full Code
-` ``{.javascript filename="table-sort.js"}
-// locate the table:
+## Full code
+
+```{.javascript filename="table-sort.js"}
+
 const tab = document.querySelector("#bhangra");
 
 
