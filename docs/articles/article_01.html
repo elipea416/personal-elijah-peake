@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -140,6 +174,11 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#intro-to-the-problem" id="toc-intro-to-the-problem" class="nav-link active" data-scroll-target="#intro-to-the-problem">Intro to the problem</a></li>
+  <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data">The Data</a></li>
+  <li><a href="#creating-the-table" id="toc-creating-the-table" class="nav-link" data-scroll-target="#creating-the-table">Creating the Table</a></li>
+  <li><a href="#creating-the-labels" id="toc-creating-the-labels" class="nav-link" data-scroll-target="#creating-the-labels">Creating the labels</a></li>
+  <li><a href="#populating-the-table" id="toc-populating-the-table" class="nav-link" data-scroll-target="#populating-the-table">Populating the table</a></li>
+  <li><a href="#full-code" id="toc-full-code" class="nav-link" data-scroll-target="#full-code">Full code</a></li>
   </ul>
 </nav>
     </div>
@@ -166,6 +205,102 @@ ul.task-list li input[type="checkbox"] {
 <section id="intro-to-the-problem" class="level2">
 <h2 class="anchored" data-anchor-id="intro-to-the-problem">Intro to the problem</h2>
 <p>This essay will explain a JavaScript code snippet that populates an HTML table with artist data. The code snippet provided demonstrates how to use JavaScript to select an HTML table and dynamically insert rows of artist information into it.</p>
+</section>
+<section id="the-data" class="level2">
+<h2 class="anchored" data-anchor-id="the-data">The Data</h2>
+<p>The code begins with the definition of an array named “artists.” This array stores information about five different artists. Each artist object has three properties: “name,” “birthYear,” and “link.”</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>input.txt</strong></pre>
+</div>
+<pre><code>const artists = [
+   {
+     name: "Ms Scandalous",
+     birthYear: 1985,
+     link: "https://www.youtube.com/watch?v=2FPivlfvxu0"
+   },
+   {
+    name: "Juggy D",
+    birthYear: 1981,
+    link: "https://www.youtube.com/watch?v=1jAc_-FVjdI"
+  },
+  {
+    name: "Sukhbir Singh",
+    birthYear: 1969,
+    link: "https://www.youtube.com/watch?v=HiprNF9Jad0"
+  },
+  {
+    name: "Abrar-ul-Haq",
+    birthYear: 1989,
+    link: "https://www.youtube.com/watch?v=-lnnVIP7FEc"
+  },
+  {
+    name: "Rishi Rich",
+    birthYear: 1970,
+    link: "https://www.youtube.com/watch?v=O95-w2gACuA"
+  }
+ ]</code></pre>
+</div>
+<p>We will be taking this data from the array and will be putting it into a table.</p>
+</section>
+<section id="creating-the-table" class="level2">
+<h2 class="anchored" data-anchor-id="creating-the-table">Creating the Table</h2>
+<p>We start off by creating the table by using this code line.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> table <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"bhangra"</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="creating-the-labels" class="level2">
+<h2 class="anchored" data-anchor-id="creating-the-labels">Creating the labels</h2>
+<p>In order to help identify each section of the table the header provides useful information for each data point.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>input.txt</strong></pre>
+</div>
+<pre><code>const labels = table.createTHead();
+labels.innerHTML = "&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Birth Year&lt;/th&gt;&lt;th&gt;Link&lt;/th&gt;&lt;/tr&gt;";</code></pre>
+</div>
+</section>
+<section id="populating-the-table" class="level2">
+<h2 class="anchored" data-anchor-id="populating-the-table">Populating the table</h2>
+<p>Now we get to putting the data into the table. This is accomplished using the <code>artists.forEach</code> loop. For each artist object in the “artists” array, the code inserts a new row (newRow) into the table and three cells (nameCell, birthYearCell, and linkCell) into that row. These cells will display the artist’s name, birth year, and a link to their YouTube video.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>input.txt</strong></pre>
+</div>
+<pre><code>artists.forEach((artist) =&gt; {
+  const newRow = table.insertRow();
+  const nameCell = newRow.insertCell(0);
+  const birthYearCell = newRow.insertCell(1);
+  const linkCell = newRow.insertCell(2);
+
+  nameCell.innerText = artist.name;
+  birthYearCell.innerText = artist.birthYear;
+  linkCell.innerHTML = `&lt;a href="${artist.link}" target="_blank"&gt;${artist.link}&lt;/a&gt;`;
+});</code></pre>
+</div>
+</section>
+<section id="full-code" class="level2">
+<h2 class="anchored" data-anchor-id="full-code">Full code</h2>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>table-assign.js</strong></pre>
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> table <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"bhangra"</span>)<span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> labels <span class="op">=</span> table<span class="op">.</span><span class="fu">createTHead</span>()<span class="op">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  labels<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="st">"&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Birth Year&lt;/th&gt;&lt;th&gt;Link&lt;/th&gt;&lt;/tr&gt;"</span><span class="op">;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  artists<span class="op">.</span><span class="fu">forEach</span>((artist) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> newRow <span class="op">=</span> table<span class="op">.</span><span class="fu">insertRow</span>()<span class="op">;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> nameCell <span class="op">=</span> newRow<span class="op">.</span><span class="fu">insertCell</span>(<span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> birthYearCell <span class="op">=</span> newRow<span class="op">.</span><span class="fu">insertCell</span>(<span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> linkCell <span class="op">=</span> newRow<span class="op">.</span><span class="fu">insertCell</span>(<span class="dv">2</span>)<span class="op">;</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    nameCell<span class="op">.</span><span class="at">innerText</span> <span class="op">=</span> artist<span class="op">.</span><span class="at">name</span><span class="op">;</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    birthYearCell<span class="op">.</span><span class="at">innerText</span> <span class="op">=</span> artist<span class="op">.</span><span class="at">birthYear</span><span class="op">;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    linkCell<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;a href="</span><span class="sc">${</span>artist<span class="op">.</span><span class="at">link</span><span class="sc">}</span><span class="vs">" target="_blank"&gt;</span><span class="sc">${</span>artist<span class="op">.</span><span class="at">link</span><span class="sc">}</span><span class="vs">&lt;/a&gt;`</span><span class="op">;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>

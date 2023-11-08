@@ -7,18 +7,67 @@
     "text": "Introducing my warmup website. This site is for an assignment in the CSC324 class at Georgetown College.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
+    "objectID": "articles/article_02.html",
+    "href": "articles/article_02.html",
+    "title": "Sorting a table",
+    "section": "",
+    "text": "In this essay we will focus on the problem of sorting a table. We do this by taking the table from the previous article and changing the code to be able to sort the information on the table."
+  },
+  {
+    "objectID": "articles/article_02.html#intro-to-the-problem",
+    "href": "articles/article_02.html#intro-to-the-problem",
+    "title": "Sorting a table",
+    "section": "",
+    "text": "In this essay we will focus on the problem of sorting a table. We do this by taking the table from the previous article and changing the code to be able to sort the information on the table."
+  },
+  {
+    "objectID": "articles/article_02.html#finding-the-table",
+    "href": "articles/article_02.html#finding-the-table",
+    "title": "Sorting a table",
+    "section": "Finding the Table",
+    "text": "Finding the Table\nThe code begins by selecting a table element with the id “bhangra” using the querySelector method and assigns it to the variable tab. This table is where we’ll put all the information about the artists, and it’s where we’ll make the artists appear in a specific order when we want to sort them. So, this while allow us to sort the table anyway we want.\nconst tab = document.querySelector(\"#bhangra\");"
+  },
+  {
+    "objectID": "articles/article_02.html#populating-the-table",
+    "href": "articles/article_02.html#populating-the-table",
+    "title": "Sorting a table",
+    "section": "Populating the table",
+    "text": "Populating the table\nA function named populateTable is defined, which takes an array arr as its parameter. This function generates the table’s content by iterating through the provided array and dynamically creating the table rows and cells to display artist information.\n\n\ninput.txt\n\nfunction populateTable(arr) {\n  let contents = \"&lt;tbody&gt;\";\n  contents += `\n    &lt;tr&gt;\n      &lt;th&gt;Name&lt;/th&gt;\n      &lt;th&gt;Year of Birth&lt;/th&gt;\n      &lt;th&gt;Link&lt;/th&gt;\n    &lt;/tr&gt;\n    `;\n  arr.forEach(artist =&gt; {\n    contents += \"&lt;tr&gt;\";\n    contents += `&lt;td&gt;${artist.name}&lt;/td&gt;`;\n    contents += `&lt;td&gt;${artist.birthYear}&lt;/td&gt;`;\n    contents += `&lt;td&gt;&lt;a href=\"${artist.link}\" target=\"_blank\"&gt;${artist.link}&lt;/a&gt;&lt;/td&gt;`;\n    contents += \"&lt;/tr&gt;\";\n  });\n  contents += \"&lt;/tbody&gt;\";\n  tab.innerHTML = contents;\n}"
+  },
+  {
+    "objectID": "articles/article_02.html#buttons-for-sorting",
+    "href": "articles/article_02.html#buttons-for-sorting",
+    "title": "Sorting a table",
+    "section": "Buttons for sorting",
+    "text": "Buttons for sorting\nThe code defines two buttons with the respective IDs “name-button” and “date-button” using querySelector. Event listeners are attached to these buttons, specifying which sorting function should be executed when a button is clicked.\nnameButton triggers the sortByName function when clicked. birthButton triggers the sortByBirthYear function when clicked. randomButton triggers the randomizeOrder function when clicked."
+  },
+  {
+    "objectID": "articles/article_02.html#sorting-function",
+    "href": "articles/article_02.html#sorting-function",
+    "title": "Sorting a table",
+    "section": "Sorting Function",
+    "text": "Sorting Function\nThree sorting functions:sortByName, sortByBirthYear, and randomizeOder are defined to sort the artist data by name, birth,year, and randomized. The functions use the sort method with to reorder the artist array. After sorting, the populateTable function is called to update the table with the sorted data."
+  },
+  {
+    "objectID": "articles/article_02.html#full-code",
+    "href": "articles/article_02.html#full-code",
+    "title": "Sorting a table",
+    "section": "Full Code",
+    "text": "Full Code\n\n\ntable-sort.js\n\n// locate the table:\nconst tab = document.querySelector(\"#bhangra\");\n\n\npopulateTable(arr = artists);\n\n\n\n\nconst nameButton = document.querySelector(\"#name-button\");\nconst birthButton = document.querySelector(\"#date-button\");\nconst randomizeButton = document.querySelector(\"#random-button\");\n\n\nnameButton.addEventListener(\"click\", sortByName);\nbirthButton.addEventListener(\"click\", sortByBirthYear);\nrandomizeButton.addEventListener(\"click\", randomizeOrder);\n\n\nfunction sortByName() {\n  let sortedArray = arr.sort((a, b) =&gt; a.name &gt; b.name ? 1 : -1);\n  populateTable(sortedArray);\n}\n\n\nfunction sortByBirthYear() {\n  let sortedArray = arr.sort((a, b) =&gt; a.birthYear - b.birthYear);\n  populateTable(sortedArray);\n}\n\n\nfunction randomizeOrder() {\n  let shuffledArray = arr.sort(() =&gt; Math.random() - 0.5);\n  populateTable(shuffledArray);\n}\n\n\nfunction populateTable(arr) {\n  let contents = \"&lt;tbody&gt;\";\n  contents += `\n    &lt;tr&gt;\n      &lt;th&gt;Name&lt;/th&gt;\n      &lt;th&gt;Year of Birth&lt;/th&gt;\n      &lt;th&gt;Link&lt;/th&gt;\n    &lt;/tr&gt;\n    `;\n  arr.forEach(artist =&gt; {\n    contents += \"&lt;tr&gt;\";\n    contents += `&lt;td&gt;${artist.name}&lt;/td&gt;`;\n    contents += `&lt;td&gt;${artist.birthYear}&lt;/td&gt;`;\n    contents += `&lt;td&gt;&lt;a href=\"${artist.link}\" target=\"_blank\"&gt;${artist.link}&lt;/a&gt;&lt;/td&gt;`;\n    contents += \"&lt;/tr&gt;\";\n  });\n  contents += \"&lt;/tbody&gt;\";\n  tab.innerHTML = contents;\n}"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About Elijah",
     "section": "",
-    "text": "I am a Sophmore at Georgetown College making a website for CSC324."
+    "text": "I was born in Kentucky and grew up on a farm most of my early life. I then moved to Georgetown where I have spent the remainder of my life. I graduated from Scott County High School in 2022 and have been at Georgetown for 3 semesters."
   },
   {
-    "objectID": "about.html#basic-info",
-    "href": "about.html#basic-info",
+    "objectID": "about.html#about-me",
+    "href": "about.html#about-me",
     "title": "About Elijah",
     "section": "",
-    "text": "I am a Sophmore at Georgetown College making a website for CSC324."
+    "text": "I was born in Kentucky and grew up on a farm most of my early life. I then moved to Georgetown where I have spent the remainder of my life. I graduated from Scott County High School in 2022 and have been at Georgetown for 3 semesters."
   },
   {
     "objectID": "articles/article_01.html",
@@ -35,10 +84,45 @@
     "text": "This essay will explain a JavaScript code snippet that populates an HTML table with artist data. The code snippet provided demonstrates how to use JavaScript to select an HTML table and dynamically insert rows of artist information into it."
   },
   {
+    "objectID": "articles/article_01.html#the-data",
+    "href": "articles/article_01.html#the-data",
+    "title": "Making a Table",
+    "section": "The Data",
+    "text": "The Data\nThe code begins with the definition of an array named “artists.” This array stores information about five different artists. Each artist object has three properties: “name,” “birthYear,” and “link.”\n\n\ninput.txt\n\nconst artists = [\n   {\n     name: \"Ms Scandalous\",\n     birthYear: 1985,\n     link: \"https://www.youtube.com/watch?v=2FPivlfvxu0\"\n   },\n   {\n    name: \"Juggy D\",\n    birthYear: 1981,\n    link: \"https://www.youtube.com/watch?v=1jAc_-FVjdI\"\n  },\n  {\n    name: \"Sukhbir Singh\",\n    birthYear: 1969,\n    link: \"https://www.youtube.com/watch?v=HiprNF9Jad0\"\n  },\n  {\n    name: \"Abrar-ul-Haq\",\n    birthYear: 1989,\n    link: \"https://www.youtube.com/watch?v=-lnnVIP7FEc\"\n  },\n  {\n    name: \"Rishi Rich\",\n    birthYear: 1970,\n    link: \"https://www.youtube.com/watch?v=O95-w2gACuA\"\n  }\n ]\n\nWe will be taking this data from the array and will be putting it into a table."
+  },
+  {
+    "objectID": "articles/article_01.html#creating-the-table",
+    "href": "articles/article_01.html#creating-the-table",
+    "title": "Making a Table",
+    "section": "Creating the Table",
+    "text": "Creating the Table\nWe start off by creating the table by using this code line.\nconst table = document.getElementById(\"bhangra\");"
+  },
+  {
+    "objectID": "articles/article_01.html#creating-the-labels",
+    "href": "articles/article_01.html#creating-the-labels",
+    "title": "Making a Table",
+    "section": "Creating the labels",
+    "text": "Creating the labels\nIn order to help identify each section of the table the header provides useful information for each data point.\n\n\ninput.txt\n\nconst labels = table.createTHead();\nlabels.innerHTML = \"&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Birth Year&lt;/th&gt;&lt;th&gt;Link&lt;/th&gt;&lt;/tr&gt;\";"
+  },
+  {
+    "objectID": "articles/article_01.html#populating-the-table",
+    "href": "articles/article_01.html#populating-the-table",
+    "title": "Making a Table",
+    "section": "Populating the table",
+    "text": "Populating the table\nNow we get to putting the data into the table. This is accomplished using the artists.forEach loop. For each artist object in the “artists” array, the code inserts a new row (newRow) into the table and three cells (nameCell, birthYearCell, and linkCell) into that row. These cells will display the artist’s name, birth year, and a link to their YouTube video.\n\n\ninput.txt\n\nartists.forEach((artist) =&gt; {\n  const newRow = table.insertRow();\n  const nameCell = newRow.insertCell(0);\n  const birthYearCell = newRow.insertCell(1);\n  const linkCell = newRow.insertCell(2);\n\n  nameCell.innerText = artist.name;\n  birthYearCell.innerText = artist.birthYear;\n  linkCell.innerHTML = `&lt;a href=\"${artist.link}\" target=\"_blank\"&gt;${artist.link}&lt;/a&gt;`;\n});"
+  },
+  {
+    "objectID": "articles/article_01.html#full-code",
+    "href": "articles/article_01.html#full-code",
+    "title": "Making a Table",
+    "section": "Full code",
+    "text": "Full code\n\n\ntable-assign.js\n\n  const table = document.getElementById(\"bhangra\");\n \n \n  const labels = table.createTHead();\n  labels.innerHTML = \"&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Birth Year&lt;/th&gt;&lt;th&gt;Link&lt;/th&gt;&lt;/tr&gt;\";\n  \n  artists.forEach((artist) =&gt; {\n    const newRow = table.insertRow();\n    const nameCell = newRow.insertCell(0);\n    const birthYearCell = newRow.insertCell(1);\n    const linkCell = newRow.insertCell(2);\n  \n    nameCell.innerText = artist.name;\n    birthYearCell.innerText = artist.birthYear;\n    linkCell.innerHTML = `&lt;a href=\"${artist.link}\" target=\"_blank\"&gt;${artist.link}&lt;/a&gt;`;\n  });"
+  },
+  {
     "objectID": "articles/index.html",
     "href": "articles/index.html",
     "title": "Articles",
     "section": "",
-    "text": "Article 1\n\n\nArticle 2\n\nThe articles on this site are made using javascript and are completed homework assignments from CSC324."
+    "text": "The articles on this site are made using javascript and are completed homework assignments from CSC324.\n\nArticle 1\n\n\nArticle 2"
   }
 ]

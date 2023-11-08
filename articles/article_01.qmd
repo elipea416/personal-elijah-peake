@@ -5,3 +5,85 @@ title: "Making a Table"
 ## Intro to the problem
 This essay will explain a JavaScript code snippet that populates an HTML table with artist data. The code snippet provided demonstrates how to use JavaScript to select an HTML table and dynamically insert rows of artist information into it. 
 
+## The Data
+The code begins with the definition of an array named "artists." This array stores information about five different artists. Each artist object has three properties: "name," "birthYear," and "link."
+```{filename="input.txt"}
+const artists = [
+   {
+     name: "Ms Scandalous",
+     birthYear: 1985,
+     link: "https://www.youtube.com/watch?v=2FPivlfvxu0"
+   },
+   {
+    name: "Juggy D",
+    birthYear: 1981,
+    link: "https://www.youtube.com/watch?v=1jAc_-FVjdI"
+  },
+  {
+    name: "Sukhbir Singh",
+    birthYear: 1969,
+    link: "https://www.youtube.com/watch?v=HiprNF9Jad0"
+  },
+  {
+    name: "Abrar-ul-Haq",
+    birthYear: 1989,
+    link: "https://www.youtube.com/watch?v=-lnnVIP7FEc"
+  },
+  {
+    name: "Rishi Rich",
+    birthYear: 1970,
+    link: "https://www.youtube.com/watch?v=O95-w2gACuA"
+  }
+ ]
+```
+
+We will be taking this data from the array and will be putting it into a table.
+
+## Creating the Table
+We start off by creating the table by using this code line.
+```js
+const table = document.getElementById("bhangra");
+```
+
+## Creating the labels
+In order to help identify each section of the table the header provides useful information for each data point.
+```{filename="input.txt"}
+const labels = table.createTHead();
+labels.innerHTML = "<tr><th>Name</th><th>Birth Year</th><th>Link</th></tr>";
+```
+
+## Populating the table
+Now we get to putting the data into the table. This is accomplished using the `artists.forEach` loop. For each artist object in the "artists" array, the code inserts a new row (newRow) into the table and three cells (nameCell, birthYearCell, and linkCell) into that row. These cells will display the artist's name, birth year, and a link to their YouTube video.
+
+```{filename="input.txt"}
+artists.forEach((artist) => {
+  const newRow = table.insertRow();
+  const nameCell = newRow.insertCell(0);
+  const birthYearCell = newRow.insertCell(1);
+  const linkCell = newRow.insertCell(2);
+
+  nameCell.innerText = artist.name;
+  birthYearCell.innerText = artist.birthYear;
+  linkCell.innerHTML = `<a href="${artist.link}" target="_blank">${artist.link}</a>`;
+});
+```
+
+## Full code
+```{.javascript filename="table-assign.js"}
+  const table = document.getElementById("bhangra");
+ 
+ 
+  const labels = table.createTHead();
+  labels.innerHTML = "<tr><th>Name</th><th>Birth Year</th><th>Link</th></tr>";
+  
+  artists.forEach((artist) => {
+    const newRow = table.insertRow();
+    const nameCell = newRow.insertCell(0);
+    const birthYearCell = newRow.insertCell(1);
+    const linkCell = newRow.insertCell(2);
+  
+    nameCell.innerText = artist.name;
+    birthYearCell.innerText = artist.birthYear;
+    linkCell.innerHTML = `<a href="${artist.link}" target="_blank">${artist.link}</a>`;
+  });
+  ```

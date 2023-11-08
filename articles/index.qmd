@@ -1,9 +1,10 @@
 ---
 title: "Articles"
 ---
+  The articles on this site are made using javascript and are completed homework assignments from CSC324.
 
   <li><a href="article_01.html">Article 1</a></li>
   
   <li><a href="article_02.html">Article 2</a></li>
 
-  The articles on this site are made using javascript and are completed homework assignments from CSC324.
+ 

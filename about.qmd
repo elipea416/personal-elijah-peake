@@ -2,14 +2,7 @@
 title: "About Elijah"
 ---
 
-## Basic Info
-I am a Sophmore at Georgetown College making a website for CSC324.
+## About Me
+I was born in Kentucky and grew up on a farm most of my early life. I then moved to Georgetown where I have spent the remainder of my life. I graduated from Scott County High School in 2022 and have been at Georgetown for 3 semesters. 
 
 
-
-
-## 
-
-
-
-## 
