@@ -61,7 +61,7 @@ function sortByBirthYear() {
 }
 ```
 # Randomize
- The function tells the computer to randomly decide where each artist should go. After shuffling, it uses another tool called "populateTable" to update the table and show the artists in a new random order, just like shuffling cards to make a new order.
+ The function tells the computer to randomly decide where each artist should go. After shuffling, it uses another tool called "populateTable" to update the table and show the artists in a new random order.
 function randomizeOrder() {
   let shuffledArray = arr.sort(() => Math.random() - 0.5);
   populateTable(shuffledArray);
@@ -76,36 +76,28 @@ const tab = document.querySelector("#bhangra");
 
 populateTable(arr = artists);
 
-
-
-
 const nameButton = document.querySelector("#name-button");
 const birthButton = document.querySelector("#date-button");
 const randomizeButton = document.querySelector("#random-button");
 
-
 nameButton.addEventListener("click", sortByName);
 birthButton.addEventListener("click", sortByBirthYear);
 randomizeButton.addEventListener("click", randomizeOrder);
-
 
 function sortByName() {
   let sortedArray = arr.sort((a, b) => a.name > b.name ? 1 : -1);
   populateTable(sortedArray);
 }
 
-
 function sortByBirthYear() {
   let sortedArray = arr.sort((a, b) => a.birthYear - b.birthYear);
   populateTable(sortedArray);
 }
 
-
 function randomizeOrder() {
   let shuffledArray = arr.sort(() => Math.random() - 0.5);
   populateTable(shuffledArray);
 }
-
 
 function populateTable(arr) {
   let contents = "<tbody>";

@@ -28,18 +28,18 @@
     "text": "Finding the Table\nThe code begins by selecting a table element with the id “bhangra” using the querySelector method and assigns it to the variable tab. This table is where we’ll put all the information about the artists, and it’s where we’ll make the artists appear in a specific order when we want to sort them. So, this while allow us to sort the table anyway we want.\nconst tab = document.querySelector(\"#bhangra\");"
   },
   {
-    "objectID": "articles/article_02.html#populating-the-table",
-    "href": "articles/article_02.html#populating-the-table",
+    "objectID": "articles/article_02.html#populating-a-table",
+    "href": "articles/article_02.html#populating-a-table",
     "title": "Sorting a table",
-    "section": "Populating the table",
-    "text": "Populating the table\nA function named populateTable is defined, which takes an array arr as its parameter. This function generates the table’s content by iterating through the provided array and dynamically creating the table rows and cells to display artist information.\n\n\ninput.txt\n\nfunction populateTable(arr) {\n  let contents = \"&lt;tbody&gt;\";\n  contents += `\n    &lt;tr&gt;\n      &lt;th&gt;Name&lt;/th&gt;\n      &lt;th&gt;Year of Birth&lt;/th&gt;\n      &lt;th&gt;Link&lt;/th&gt;\n    &lt;/tr&gt;\n    `;\n  arr.forEach(artist =&gt; {\n    contents += \"&lt;tr&gt;\";\n    contents += `&lt;td&gt;${artist.name}&lt;/td&gt;`;\n    contents += `&lt;td&gt;${artist.birthYear}&lt;/td&gt;`;\n    contents += `&lt;td&gt;&lt;a href=\"${artist.link}\" target=\"_blank\"&gt;${artist.link}&lt;/a&gt;&lt;/td&gt;`;\n    contents += \"&lt;/tr&gt;\";\n  });\n  contents += \"&lt;/tbody&gt;\";\n  tab.innerHTML = contents;\n}"
+    "section": "Populating a table",
+    "text": "Populating a table\nA function named populateTable is defined, which takes an array arr as its parameter. This function generates the table’s content by iterating through the provided array and dynamically creating the table rows and cells to display artist information.\n\n\ninput.txt\n\nfunction populateTable(arr) {\n  let contents = \"&lt;tbody&gt;\";\n  contents += `\n    &lt;tr&gt;\n      &lt;th&gt;Name&lt;/th&gt;\n      &lt;th&gt;Year of Birth&lt;/th&gt;\n      &lt;th&gt;Link&lt;/th&gt;\n    &lt;/tr&gt;\n    `;\n  arr.forEach(artist =&gt; {\n    contents += \"&lt;tr&gt;\";\n    contents += `&lt;td&gt;${artist.name}&lt;/td&gt;`;\n    contents += `&lt;td&gt;${artist.birthYear}&lt;/td&gt;`;\n    contents += `&lt;td&gt;&lt;a href=\"${artist.link}\" target=\"_blank\"&gt;${artist.link}&lt;/a&gt;&lt;/td&gt;`;\n    contents += \"&lt;/tr&gt;\";\n  });\n  contents += \"&lt;/tbody&gt;\";\n  tab.innerHTML = contents;\n}"
   },
   {
     "objectID": "articles/article_02.html#buttons-for-sorting",
     "href": "articles/article_02.html#buttons-for-sorting",
     "title": "Sorting a table",
     "section": "Buttons for sorting",
-    "text": "Buttons for sorting\nThe code defines two buttons with the respective IDs “name-button” and “date-button” using querySelector. Event listeners are attached to these buttons, specifying which sorting function should be executed when a button is clicked.\nnameButton triggers the sortByName function when clicked. birthButton triggers the sortByBirthYear function when clicked. randomButton triggers the randomizeOrder function when clicked."
+    "text": "Buttons for sorting\nThe code defines three buttons with the respective IDs: “name-button”, “date-button”, and “random-button” using querySelector. Event listeners are attached to these buttons, specifying which sorting function should be executed when a button is clicked.\nnameButton triggers the sortByName function when clicked. birthButton triggers the sortByBirthYear function when clicked. randomButton triggers the randomizeOrder function when clicked."
   },
   {
     "objectID": "articles/article_02.html#sorting-function",
@@ -47,13 +47,6 @@
     "title": "Sorting a table",
     "section": "Sorting Function",
     "text": "Sorting Function\nThree sorting functions:sortByName, sortByBirthYear, and randomizeOder are defined to sort the artist data by name, birth,year, and randomized. The functions use the sort method with to reorder the artist array. After sorting, the populateTable function is called to update the table with the sorted data."
-  },
-  {
-    "objectID": "articles/article_02.html#full-code",
-    "href": "articles/article_02.html#full-code",
-    "title": "Sorting a table",
-    "section": "Full Code",
-    "text": "Full Code\n\n\ntable-sort.js\n\n// locate the table:\nconst tab = document.querySelector(\"#bhangra\");\n\n\npopulateTable(arr = artists);\n\n\n\n\nconst nameButton = document.querySelector(\"#name-button\");\nconst birthButton = document.querySelector(\"#date-button\");\nconst randomizeButton = document.querySelector(\"#random-button\");\n\n\nnameButton.addEventListener(\"click\", sortByName);\nbirthButton.addEventListener(\"click\", sortByBirthYear);\nrandomizeButton.addEventListener(\"click\", randomizeOrder);\n\n\nfunction sortByName() {\n  let sortedArray = arr.sort((a, b) =&gt; a.name &gt; b.name ? 1 : -1);\n  populateTable(sortedArray);\n}\n\n\nfunction sortByBirthYear() {\n  let sortedArray = arr.sort((a, b) =&gt; a.birthYear - b.birthYear);\n  populateTable(sortedArray);\n}\n\n\nfunction randomizeOrder() {\n  let shuffledArray = arr.sort(() =&gt; Math.random() - 0.5);\n  populateTable(shuffledArray);\n}\n\n\nfunction populateTable(arr) {\n  let contents = \"&lt;tbody&gt;\";\n  contents += `\n    &lt;tr&gt;\n      &lt;th&gt;Name&lt;/th&gt;\n      &lt;th&gt;Year of Birth&lt;/th&gt;\n      &lt;th&gt;Link&lt;/th&gt;\n    &lt;/tr&gt;\n    `;\n  arr.forEach(artist =&gt; {\n    contents += \"&lt;tr&gt;\";\n    contents += `&lt;td&gt;${artist.name}&lt;/td&gt;`;\n    contents += `&lt;td&gt;${artist.birthYear}&lt;/td&gt;`;\n    contents += `&lt;td&gt;&lt;a href=\"${artist.link}\" target=\"_blank\"&gt;${artist.link}&lt;/a&gt;&lt;/td&gt;`;\n    contents += \"&lt;/tr&gt;\";\n  });\n  contents += \"&lt;/tbody&gt;\";\n  tab.innerHTML = contents;\n}"
   },
   {
     "objectID": "about.html",
@@ -109,7 +102,7 @@
     "href": "articles/article_01.html#populating-the-table",
     "title": "Making a Table",
     "section": "Populating the table",
-    "text": "Populating the table\nNow we get to putting the data into the table. This is accomplished using the artists.forEach loop. For each artist object in the “artists” array, the code inserts a new row (newRow) into the table and three cells (nameCell, birthYearCell, and linkCell) into that row. These cells will display the artist’s name, birth year, and a link to their YouTube video.\n\n\ninput.txt\n\nartists.forEach((artist) =&gt; {\n  const newRow = table.insertRow();\n  const nameCell = newRow.insertCell(0);\n  const birthYearCell = newRow.insertCell(1);\n  const linkCell = newRow.insertCell(2);\n\n  nameCell.innerText = artist.name;\n  birthYearCell.innerText = artist.birthYear;\n  linkCell.innerHTML = `&lt;a href=\"${artist.link}\" target=\"_blank\"&gt;${artist.link}&lt;/a&gt;`;\n});"
+    "text": "Populating the table\nNow, we get to actually filling the table with data. We use the code artists.forEach loop.\nIt’s like making a list, and for each artist in our list (the “artists” array), we do the same thing:\nWe create a new row to represent each artist, and we call it “newRow.” It’s like adding a new line to our list.\nInside that new row, create three cells to put the artist’s details. Label the names: “nameCell,” “birthYearCell,” and “linkCell.” These cells are separate columns in our list.\nIn the “nameCell,” write down the artist’s name. In the “birthYearCell,” put their birth year. And in the “linkCell,” add a link to their YouTube video. So, we’re filling in our list with the artist’s name, birth year, and a link to their video.\nWe do this for every artist in our list, and as we go through the loop, we keep adding new rows with the artist’s details. It’s building our list one artist at a time.\nSo, this loop helps us create a table with all the artists and their information; making the table complete.\n\n\ninput.txt\n\nartists.forEach((artist) =&gt; {\n  const newRow = table.insertRow();\n  const nameCell = newRow.insertCell(0);\n  const birthYearCell = newRow.insertCell(1);\n  const linkCell = newRow.insertCell(2);\n\n  nameCell.innerText = artist.name;\n  birthYearCell.innerText = artist.birthYear;\n  linkCell.innerHTML = `&lt;a href=\"${artist.link}\" target=\"_blank\"&gt;${artist.link}&lt;/a&gt;`;\n});"
   },
   {
     "objectID": "articles/article_01.html#full-code",

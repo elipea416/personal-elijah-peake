@@ -3,7 +3,7 @@ title: "Making a Table"
 ---
 
 ## Intro to the problem
-This essay will explain a JavaScript code snippet that populates an HTML table with artist data. The code snippet provided demonstrates how to use JavaScript to select an HTML table and dynamically insert rows of artist information into it. 
+This essay will explain a JavaScript code snippet that populates a table with artist data. The code snippet provided demonstrates how to use JavaScript to select a table and dynamically insert rows of artist information into it. 
 
 ## The Data
 The code begins with the definition of an array named "artists." This array stores information about five different artists. Each artist object has three properties: "name," "birthYear," and "link."
@@ -63,10 +63,6 @@ Inside that new row, create three cells to put the artist's details. Label the n
 
 In the "nameCell," write down the artist's name. In the "birthYearCell," put their birth year. And in the "linkCell," add a link to their YouTube video. So, we're filling in our list with the artist's name, birth year, and a link to their video.
 
-We do this for every artist in our list, and as we go through the loop, we keep adding new rows with the artist's details. It's building our list one artist at a time.
-
-So, this loop helps us create a table with all the artists and their information; making the table complete.
-
 ```{filename="input.txt"}
 artists.forEach((artist) => {
   const newRow = table.insertRow();
@@ -79,6 +75,10 @@ artists.forEach((artist) => {
   linkCell.innerHTML = `<a href="${artist.link}" target="_blank">${artist.link}</a>`;
 });
 ```
+
+We do this for every artist in our list, and as we go through the loop, we keep adding new rows with the artist's details. It's building our list one artist at a time.
+
+So, this loop helps us create a table with all the artists and their information; making the table complete.
 
 ## Full code
 ```{.javascript filename="table-assign.js"}
