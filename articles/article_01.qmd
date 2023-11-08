@@ -53,7 +53,19 @@ labels.innerHTML = "<tr><th>Name</th><th>Birth Year</th><th>Link</th></tr>";
 ```
 
 ## Populating the table
-Now we get to putting the data into the table. This is accomplished using the `artists.forEach` loop. For each artist object in the "artists" array, the code inserts a new row (newRow) into the table and three cells (nameCell, birthYearCell, and linkCell) into that row. These cells will display the artist's name, birth year, and a link to their YouTube video.
+Now, we get to actually filling the table with data. We use the code `artists.forEach` loop.
+
+It's like making a list, and for each artist in our list (the "artists" array), we do the same thing: 
+
+We create a new row to represent each artist, and we call it "newRow." It's like adding a new line to our list.
+
+Inside that new row, create three cells to put the artist's details. Label the names: "nameCell," "birthYearCell," and "linkCell." These cells are separate columns in our list.
+
+In the "nameCell," write down the artist's name. In the "birthYearCell," put their birth year. And in the "linkCell," add a link to their YouTube video. So, we're filling in our list with the artist's name, birth year, and a link to their video.
+
+We do this for every artist in our list, and as we go through the loop, we keep adding new rows with the artist's details. It's building our list one artist at a time.
+
+So, this loop helps us create a table with all the artists and their information; making the table complete.
 
 ```{filename="input.txt"}
 artists.forEach((artist) => {
