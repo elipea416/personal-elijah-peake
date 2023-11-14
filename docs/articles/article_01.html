@@ -98,8 +98,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
-
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -134,39 +133,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../articles/article_01.html">Making a Table</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../articles/article_01.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Making a Table</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../articles/article_02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sorting a Table</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -204,7 +174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="intro-to-the-problem" class="level2">
 <h2 class="anchored" data-anchor-id="intro-to-the-problem">Intro to the problem</h2>
-<p>This essay will explain a JavaScript code snippet that populates an HTML table with artist data. The code snippet provided demonstrates how to use JavaScript to select an HTML table and dynamically insert rows of artist information into it.</p>
+<p>This essay will explain a JavaScript code snippet that populates a table with artist data. The code snippet provided demonstrates how to use JavaScript to select a table and dynamically insert rows of artist information into it.</p>
 </section>
 <section id="the-data" class="level2">
 <h2 class="anchored" data-anchor-id="the-data">The Data</h2>
@@ -266,8 +236,6 @@ labels.innerHTML = "&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Birth Year&lt;/
 <p>We create a new row to represent each artist, and we call it “newRow.” It’s like adding a new line to our list.</p>
 <p>Inside that new row, create three cells to put the artist’s details. Label the names: “nameCell,” “birthYearCell,” and “linkCell.” These cells are separate columns in our list.</p>
 <p>In the “nameCell,” write down the artist’s name. In the “birthYearCell,” put their birth year. And in the “linkCell,” add a link to their YouTube video. So, we’re filling in our list with the artist’s name, birth year, and a link to their video.</p>
-<p>We do this for every artist in our list, and as we go through the loop, we keep adding new rows with the artist’s details. It’s building our list one artist at a time.</p>
-<p>So, this loop helps us create a table with all the artists and their information; making the table complete.</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>input.txt</strong></pre>
@@ -283,6 +251,8 @@ labels.innerHTML = "&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Birth Year&lt;/
   linkCell.innerHTML = `&lt;a href="${artist.link}" target="_blank"&gt;${artist.link}&lt;/a&gt;`;
 });</code></pre>
 </div>
+<p>We do this for every artist in our list, and as we go through the loop, we keep adding new rows with the artist’s details. It’s building our list one artist at a time.</p>
+<p>So, this loop helps us create a table with all the artists and their information; making the table complete.</p>
 </section>
 <section id="full-code" class="level2">
 <h2 class="anchored" data-anchor-id="full-code">Full code</h2>

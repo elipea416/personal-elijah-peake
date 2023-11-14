@@ -14,18 +14,24 @@ website:
       - href: articles/index.qmd
         text: Articles
  
-  sidebar:
-    - id: articles
-      title: "Articles"
-      style: "docked"
-      background: light
-      collapse-level: 2
-      contents:
-       - text: "Making a Table"
-         href: articles/article_01.qmd
-       - text: "Sorting a Table"
-         href: articles/article_02.qmd
-
+sidebar:
+  - id: None
+    style: "docked"
+    background: light
+    collapse-level: 2
+    contents:
+      - section: "Articles"
+        href: articles/index.qmd
+        contents:
+          - text: "Making a Table"
+            href: articles/article_01.qmd
+          - text: "Sorting a Table"
+            href: articles/article_02.qmd
+      - section: "Posts"
+        href: posts/index.qmd
+        contents: "posts/*/*.qmd"
+        sort:
+          - "date desc"
 
 format:
   html:

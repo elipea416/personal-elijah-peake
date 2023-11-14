@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Elijah Peake’s Website Warmup - Sorting a table</title>
+<title>Elijah Peake’s Website Warmup - elijah’s blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,6 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -93,7 +61,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -135,31 +134,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#intro-to-the-problem" id="toc-intro-to-the-problem" class="nav-link active" data-scroll-target="#intro-to-the-problem">Intro to the problem</a></li>
-  <li><a href="#finding-the-table" id="toc-finding-the-table" class="nav-link" data-scroll-target="#finding-the-table">Finding the Table</a></li>
-  <li><a href="#populating-a-table" id="toc-populating-a-table" class="nav-link" data-scroll-target="#populating-a-table">Populating a table</a></li>
-  <li><a href="#buttons-for-sorting" id="toc-buttons-for-sorting" class="nav-link" data-scroll-target="#buttons-for-sorting">Buttons for sorting</a></li>
-  <li><a href="#sorting-function" id="toc-sorting-function" class="nav-link" data-scroll-target="#sorting-function">Sorting Function</a></li>
-  <li><a href="#name-sorting" id="toc-name-sorting" class="nav-link" data-scroll-target="#name-sorting">Name Sorting</a></li>
-  <li><a href="#date-sorting" id="toc-date-sorting" class="nav-link" data-scroll-target="#date-sorting">Date sorting</a></li>
-  <li><a href="#randomize" id="toc-randomize" class="nav-link" data-scroll-target="#randomize">Randomize</a></li>
-  </ul>
-</nav>
-    </div>
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sorting a table</h1>
+<h1 class="title">elijah’s blog</h1>
 </div>
 
 
@@ -174,128 +160,122 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="intro-to-the-problem" class="level2">
-<h2 class="anchored" data-anchor-id="intro-to-the-problem">Intro to the problem</h2>
-<p>In this essay we will focus on the problem of sorting a table. We do this by taking the table from the previous article and changing the code to be able to sort the information on the table.</p>
-</section>
-<section id="finding-the-table" class="level2">
-<h2 class="anchored" data-anchor-id="finding-the-table">Finding the Table</h2>
-<p>The code begins by selecting a table element with the id “bhangra” using the <code>querySelector</code> method and assigns it to the variable tab. This table is where we’ll put all the information about the artists, and it’s where we’ll make the artists appear in a specific order when we want to sort them. So, this while allow us to sort the table anyway we want.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> tab <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#bhangra"</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="populating-a-table" class="level2">
-<h2 class="anchored" data-anchor-id="populating-a-table">Populating a table</h2>
-<p>A function named populateTable is defined, which takes an array <code>arr</code> as its parameter. This function generates the table’s content by iterating through the provided array and dynamically creating the table rows and cells to display artist information.</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>input.txt</strong></pre>
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1699997184398" data-listing-reading-time-sort="2">
+<div class="thumbnail">
+<p><a href="../posts/2023-11-10/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
-<pre><code>function populateTable(arr) {
-  let contents = "&lt;tbody&gt;";
-  contents += `
-    &lt;tr&gt;
-      &lt;th&gt;Name&lt;/th&gt;
-      &lt;th&gt;Year of Birth&lt;/th&gt;
-      &lt;th&gt;Link&lt;/th&gt;
-    &lt;/tr&gt;
-    `;
-  arr.forEach(artist =&gt; {
-    contents += "&lt;tr&gt;";
-    contents += `&lt;td&gt;${artist.name}&lt;/td&gt;`;
-    contents += `&lt;td&gt;${artist.birthYear}&lt;/td&gt;`;
-    contents += `&lt;td&gt;&lt;a href="${artist.link}" target="_blank"&gt;${artist.link}&lt;/a&gt;&lt;/td&gt;`;
-    contents += "&lt;/tr&gt;";
-  });
-  contents += "&lt;/tbody&gt;";
-  tab.innerHTML = contents;
-}</code></pre>
+<div class="body">
+<a href="../posts/2023-11-10/index.html">
+<h3 class="no-anchor listing-title">
+Blog Post #1
+</h3>
+<div class="listing-subtitle">
+
 </div>
-</section>
-<section id="buttons-for-sorting" class="level2">
-<h2 class="anchored" data-anchor-id="buttons-for-sorting">Buttons for sorting</h2>
-<p>The code defines three buttons with the respective IDs: “name-button”, “date-button”, and “random-button” using <code>querySelector</code>. Event listeners are attached to these buttons, specifying which sorting function should be executed when a button is clicked.</p>
-<p><code>nameButton</code> triggers the <code>sortByName</code> function when clicked. <code>birthButton</code> triggers the <code>sortByBirthYear</code> function when clicked. <code>randomButton</code> triggers the <code>randomizeOrder</code> function when clicked.</p>
-</section>
-<section id="sorting-function" class="level2">
-<h2 class="anchored" data-anchor-id="sorting-function">Sorting Function</h2>
-<p>Three sorting functions:<code>sortByName</code>, <code>sortByBirthYear</code>, and <code>randomizeOder</code> are defined to sort the artist data by name, birth,year, and randomized. The functions use the sort method with to reorder the artist array. After sorting, the <code>populateTable</code> function is called to update the table with the sorted data.</p>
-</section>
-<section id="name-sorting" class="level1">
-<h1>Name Sorting</h1>
-<p>This function helps us put the artists in the right order by their names. It uses a tool called “sort” that can rearrange our list of artists. It looks at each artist’s name and decides if it should come before or after another artist’s name. If one name is greater (like coming later in the alphabet), it gets a number 1, which means it should come later in the sorted list. After sorting all the names, this function uses another function called “populateTable” to update the table and show the artists in alphabetical order.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sortByName</span>() {</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> sortedArray <span class="op">=</span> arr<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">name</span> <span class="op">&gt;</span> b<span class="op">.</span><span class="at">name</span> <span class="op">?</span> <span class="dv">1</span> <span class="op">:</span> <span class="op">-</span><span class="dv">1</span>)<span class="op">;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">populateTable</span>(sortedArray)<span class="op">;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="date-sorting" class="level1">
-<h1>Date sorting</h1>
-<p>This function helps us arrange the artists by when they were born. It looks at each artist’s birth year and figures out if one artist was born later or earlier than another. If one artist was born later (meaning their year is bigger), it gets a number above zero, so it should come after the others. If their birth years are the same or if one was born earlier, it gets a number less than or equal to zero, so they should come earlier in the sorted list. After sorting, this function uses another function called “populateTable” to update the table and show the artists in the order of their birth years.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sortByBirthYear</span>() {</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> sortedArray <span class="op">=</span> arr<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">birthYear</span> <span class="op">-</span> b<span class="op">.</span><span class="at">birthYear</span>)<span class="op">;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">populateTable</span>(sortedArray)<span class="op">;</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="randomize" class="level1">
-<h1>Randomize</h1>
-<p>The function tells the computer to randomly decide where each artist should go. After shuffling, it uses another tool called “populateTable” to update the table and show the artists in a new random order. function randomizeOrder() { let shuffledArray = arr.sort(() =&gt; Math.random() - 0.5); populateTable(shuffledArray); }</p>
-<pre><code>
-## Full code
+<div class="listing-description">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In est ante in nibh mauris cursus mattis…
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../posts/2023-11-10/index.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1699997206119" data-listing-reading-time-sort="2">
+<div class="thumbnail">
+<p><a href="../posts/2023-11-11/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2023-11-11/index.html">
+<h3 class="no-anchor listing-title">
+Blog post #2
+</h3>
+<div class="listing-subtitle">
 
-```{.javascript filename="table-sort.js"}
+</div>
+<div class="listing-description">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique…
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../posts/2023-11-11/index.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1699997231809" data-listing-reading-time-sort="8">
+<div class="thumbnail">
+<p><a href="../posts/2023-11-12/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2023-11-12/index.html">
+<h3 class="no-anchor listing-title">
+Blog Post #3
+</h3>
+<div class="listing-subtitle">
 
-const tab = document.querySelector("#bhangra");
+</div>
+<div class="listing-description">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus est pellentesque elit ullamcorper…
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../posts/2023-11-12/index.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1699997251500" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="../posts/2023-11-13/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2023-11-13/index.html">
+<h3 class="no-anchor listing-title">
+Blog Post #4
+</h3>
+<div class="listing-subtitle">
 
+</div>
+<div class="listing-description">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet commodo nulla facilisi nullam vehicula…
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../posts/2023-11-13/index.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1699997472578" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="../posts/2023-11-14/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2023-11-14/index.html">
+<h3 class="no-anchor listing-title">
+Blog Post #5
+</h3>
+<div class="listing-subtitle">
 
-populateTable(arr = artists);
-
-const nameButton = document.querySelector("#name-button");
-const birthButton = document.querySelector("#date-button");
-const randomizeButton = document.querySelector("#random-button");
-
-nameButton.addEventListener("click", sortByName);
-birthButton.addEventListener("click", sortByBirthYear);
-randomizeButton.addEventListener("click", randomizeOrder);
-
-function sortByName() {
-  let sortedArray = arr.sort((a, b) =&gt; a.name &gt; b.name ? 1 : -1);
-  populateTable(sortedArray);
-}
-
-function sortByBirthYear() {
-  let sortedArray = arr.sort((a, b) =&gt; a.birthYear - b.birthYear);
-  populateTable(sortedArray);
-}
-
-function randomizeOrder() {
-  let shuffledArray = arr.sort(() =&gt; Math.random() - 0.5);
-  populateTable(shuffledArray);
-}
-
-function populateTable(arr) {
-  let contents = "&lt;tbody&gt;";
-  contents += `
-    &lt;tr&gt;
-      &lt;th&gt;Name&lt;/th&gt;
-      &lt;th&gt;Year of Birth&lt;/th&gt;
-      &lt;th&gt;Link&lt;/th&gt;
-    &lt;/tr&gt;
-    `;
-  arr.forEach(artist =&gt; {
-    contents += "&lt;tr&gt;";
-    contents += `&lt;td&gt;${artist.name}&lt;/td&gt;`;
-    contents += `&lt;td&gt;${artist.birthYear}&lt;/td&gt;`;
-    contents += `&lt;td&gt;&lt;a href="${artist.link}" target="_blank"&gt;${artist.link}&lt;/a&gt;&lt;/td&gt;`;
-    contents += "&lt;/tr&gt;";
-  });
-  contents += "&lt;/tbody&gt;";
-  tab.innerHTML = contents;
-}</code></pre>
-
-
-</section>
-
-</main> <!-- /main -->
+</div>
+<div class="listing-description">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae justo eget magna fermentum iaculis. Sed…
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../posts/2023-11-14/index.html"> </a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
