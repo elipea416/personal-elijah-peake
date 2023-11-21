@@ -5,6 +5,7 @@ project:
 website:
   title: "Elijah Peake's Website Warmup"
   site-path: "/warmup-elijah-peake/"
+  favicon: images/logo.jpeg
   navbar:
     left:
       - href: index.qmd
@@ -13,25 +14,30 @@ website:
         text: About 
       - href: articles/index.qmd
         text: Articles
+      - href: posts/index.qmd
+        text: Blog
  
 sidebar:
-  - id: None
-    style: "docked"
-    background: light
-    collapse-level: 2
-    contents:
-      - section: "Articles"
-        href: articles/index.qmd
-        contents:
-          - text: "Making a Table"
-            href: articles/article_01.qmd
-          - text: "Sorting a Table"
-            href: articles/article_02.qmd
-      - section: "Posts"
-        href: posts/index.qmd
-        contents: "posts/*/*.qmd"
-        sort:
-          - "date desc"
+    - id: none
+      style: "docked"
+      background: light
+      collapse-level: 2
+      contents:
+        - section: "Articles"
+          href: articles/index.qmd
+          contents: 
+            - text: "Making a table"
+              href:  articles/article_01.qmd
+            - text: "Sorting a table"
+              href:  articles/article_02.qmd
+        - section: "Posts"
+          href: posts/index.qmd
+          contents: "posts/*/*.qmd"
+          sort:
+            - "date desc"
+
+
+
 
 format:
   html:

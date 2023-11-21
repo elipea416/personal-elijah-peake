@@ -2,6 +2,10 @@
 title: "About Elijah"
 ---
 
+<img src= "/images/image0.jpeg"
+style="float: center; margin 3px 0px 3px 12px;"
+width= 250>
+
 ## About Me
 I was born in Kentucky and grew up on a farm most of my early life. I then moved to Georgetown where I have spent the remainder of my life. I graduated from Scott County High School in 2022 and have been at Georgetown for 3 semesters. 
 

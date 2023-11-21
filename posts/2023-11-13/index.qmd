@@ -1,3 +1,11 @@
-## Blog Post #4
+---
+title: "Lorem ipsum #2"
+description: "Larum ipsum blog number 2"
+author:
+    - Elijah Peake
+Date: "2023-11-13"
+catagories: [Play]
+image: banner.jpg
+---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet commodo nulla facilisi nullam vehicula ipsum a. Sed risus ultricies tristique nulla aliquet enim tortor. A diam sollicitudin tempor id eu nisl nunc mi. Eget est lorem ipsum dolor. At augue eget arcu dictum. Vel fringilla est ullamcorper eget. Amet consectetur adipiscing elit pellentesque habitant morbi. Congue nisi vitae suscipit tellus. Bibendum arcu vitae elementum curabitur vitae nunc sed velit. Orci nulla pellentesque dignissim enim sit amet venenatis. Sagittis id consectetur purus ut faucibus. Suspendisse ultrices gravida dictum fusce. Consectetur libero id faucibus nisl tincidunt. Et ultrices neque ornare aenean euismod elementum nisi quis eleifend. Posuere morbi leo urna molestie at elementum. Mi sit amet mauris commodo quis imperdiet. Tempor id eu nisl nunc mi ipsum.
