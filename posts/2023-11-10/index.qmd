@@ -4,7 +4,7 @@ description: "Substantive Blog Number 1"
 author:
     - Elijah Peake
 date: "2023-11-10"
-catagories: [blabber, substantive]
+categories: [blabber, substantive]
 image: banner.jpg
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In est ante in nibh mauris cursus mattis molestie. Sed euismod nisi porta lorem. Nec dui nunc mattis enim ut tellus elementum sagittis vitae. Morbi tincidunt augue interdum velit euismod. Hac habitasse platea dictumst quisque. Ut tortor pretium viverra suspendisse potenti nullam ac. Nisl nisi scelerisque eu ultrices vitae auctor. Accumsan in nisl nisi scelerisque eu ultrices. Cras semper auctor neque vitae tempus quam pellentesque. Tincidunt eget nullam non nisi est sit amet facilisis magna. Id venenatis a condimentum vitae sapien. Amet cursus sit amet dictum sit. Arcu cursus euismod quis viverra. Quam adipiscing vitae proin sagittis nisl rhoncus. Lobortis elementum nibh tellus molestie nunc non. Arcu non sodales neque sodales ut. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Dui sapien eget mi proin sed libero enim sed.

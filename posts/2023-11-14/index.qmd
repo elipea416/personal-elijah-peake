@@ -4,7 +4,7 @@ description: "Larum ipsum blog number 3"
 author:
     - Elijah Peake
 date: "2023-11-14"
-catagories: [Art]
+categories: [Art]
 image: banner.jpg
 ---
 
