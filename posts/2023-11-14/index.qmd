@@ -3,7 +3,7 @@ title: "Lorem ipsum #3"
 description: "Larum ipsum blog number 3"
 author:
     - Elijah Peake
-Date: "2023-11-14"
+date: "2023-11-14"
 catagories: [Art]
 image: banner.jpg
 ---

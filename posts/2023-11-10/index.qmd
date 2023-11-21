@@ -3,7 +3,7 @@ title: "Substantive Blog #1"
 description: "Substantive Blog Number 1"
 author:
     - Elijah Peake
-Date: "2023-11-10"
+date: "2023-11-10"
 catagories: [blabber, substantive]
 image: banner.jpg
 ---
