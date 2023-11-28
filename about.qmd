@@ -2,11 +2,16 @@
 title: "About Elijah"
 ---
 
-<img src= "/images/image0.jpeg"
+<img src= "/images/IMG_2648.jpg"
 style="float: center; margin 3px 0px 3px 12px;"
 width= 250>
 
 ## About Me
-I was born in Kentucky and grew up on a farm most of my early life. I then moved to Georgetown where I have spent the remainder of my life. I graduated from Scott County High School in 2022 and have been at Georgetown for 3 semesters. 
+My names Elijah. I'm a student at Georgetown college set to graduate in 2026. I am majoring in Biology and minoring in computer science.
+
+## Early Life to Now
+I'm from Mt. Sterling, Kentucky. I lived there for about 10 years spending most of my time on my grandparents farm. I moved to Georgetown during my 5th grade year and have lived here ever since. I attended Scott County High School and graduated in 2022. In my free time I spend time hanging out with my friends or playing video games. 
+
+
 
 

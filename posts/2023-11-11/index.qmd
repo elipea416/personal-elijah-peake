@@ -1,6 +1,6 @@
 ---
-title: "Substantive Blog #2"
-description: "Substantive Blog Number 2"
+title: "Minor enhancement"
+description: "Minor enhancement Icon"
 author:
     - Elijah Peake
 date: "2023-11-11"
@@ -8,39 +8,39 @@ categories: [blabber, substantive]
 image: banner.jpg
 ---
 
-**Elijah Peake**  
-**English 112**  
-**Professor Jennifer Murray**  
-**1 May 2023**
+# Intro
 
-# Insider trading in Congress
+The minor enhencement I made for my website was putting an icon in the top address bar.
 
-What if I told you that there's a group of people who have a legal license to insider trading? These people are none other than the lawmakers who are supposed to represent us. Members of Congress have been caught time and time again buying and selling stocks based on information that the general public doesn't have access to. This has caused an uproar, with many people calling for stricter regulations and even criminal charges. So, why does this controversy matter, and what can be done about it? As elected officials, their primary responsibility is to act in the best interest of their constituents and make decisions that benefit the American people as a whole. However, when Congress members engage in stock trading, they create a conflict of interest that undermines their ability to fulfill this responsibility.
 
-## Conflict of Interest and Unfair Advantage
+# Implementing the Icon
 
-Allowing Congress members to buy and sell stocks gives them an unfair advantage over the general public. They have access to information that is not available to the public, including confidential government briefings and reports. This information can be used to make profitable trades, giving lawmakers an advantage over ordinary citizens in the stock market. Moreover, their actions may influence the market and create a perception of impropriety or preferential treatment.
+First you need to get the picture that you want to use for the icon. In my case I used this picture.
 
-## Erosion of Public Trust
 
-Furthermore, congressional stock trading erodes public trust in the government. Americans expect their elected officials to act with integrity and prioritize the public interest. When lawmakers engage in stock trading, it creates the perception that they are more interested in personal financial gain than in serving their constituents. This perception undermines the public's trust in government and can lead to a lack of faith in the democratic process.
+<img src= "/images/image0.jpeg"
+style="float: center; margin 3px 0px 3px 12px;"
+width= 250>
 
-## Ethical Concerns and Need for Reform
+After getting my image, located in my `images` folder, In my `quarto.yml` document under the `website` area, I put the favicon along with the image. That looks something like this.
 
-In light of these concerns, Congress members should not be allowed to buy and sell stocks. Doing so creates conflicts of interest that undermine their ability to act in the best interest of the American people, erodes public trust in government, gives them an unfair advantage over the general public in the stock market, and makes quid pro quo arrangements between lawmakers and companies. Instead, lawmakers should focus on fulfilling their responsibilities to their constituents and making decisions that benefit the public interest and America as a whole.
+```.js
+---
+website:
+  title: "Elijah Peake's Website Warmup"
+  site-path: "/warmup-elijah-peake/"
+  favicon: images/logo.jpeg
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About 
+      - href: articles/index.qmd
+        text: Articles
+      - href: posts/index.qmd
+        text: Blog
+---
+```
+Doing this allows my website to have its very own icon.
 
-## Impact on Lawmakers' Decisions
-
-Congressional stock trading undermines the lawmakers' ability to act in the best interest of the American public in many different ways. Lawmakers' personal financial interests in certain industries or companies can influence their decisions, causing them to prioritize financial gain over the public interest. This can lead to decisions not in the best interest of the American people, creating potential conflicts between official duties and personal financial interests.
-
-## The Need for Reform and Transparency
-
-Moreover, the perception that lawmakers are acting in their self-interest rather than the public interest can erode trust in government and undermine the democratic process. If the public believes that lawmakers prioritize enriching themselves, they may lose faith in the democratic process altogether. This erosion of trust highlights the urgent need for reform to prevent activities seen as self-serving, ensuring lawmakers focus on serving constituents rather than advancing their financial interests.
-
-## Insider Trading Concerns and Lack of Accountability
-
-Additionally, congressional stock trading provides an unfair advantage over the general public, as lawmakers have access to sensitive information not available to others. Insider information can lead to informed investment decisions that give lawmakers an edge in the market. Despite regulations like the STOCK Act, lawmakers may use upcoming legislation to make profitable trades, creating suspicions of insider trading without facing consequences.
-
-## Conclusion
-
-In conclusion, the ethics and implications of congressional stock trading have been widely debated due to conflicts of interest and lack of transparency. Lawmakers' actions have the potential to undermine public trust, erode democratic processes, and prioritize personal financial gain over the public interest. Reform is necessary to ensure elected officials remain focused on serving constituents rather than advancing their financial interests. Lawmakers should prioritize fulfilling their responsibilities to their constituents and making decisions that benefit the public interest and America as a whole, rather than engaging in activities that create conflicts of interest and undermine public trust in government.

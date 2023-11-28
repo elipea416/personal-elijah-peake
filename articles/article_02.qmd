@@ -6,13 +6,16 @@ title: "Sorting a table"
 In this essay we will focus on the problem of sorting a table. We do this by taking the table from the previous article and changing the code to be able to sort the information on the table.
 
 ## Finding the Table
-The code begins by selecting a table element with the id "bhangra" using the `querySelector` method and assigns it to the variable tab. This table is where we'll put all the information about the artists, and it's where we'll make the artists appear in a specific order when we want to sort them. So, this while allow us to sort the table anyway we want.
+The code begins by selecting a table element with the id "bhangra" using the `querySelector` method and assigns it to the variable tab. This table is where we'll put all the information about the artists, and it's where we'll make the artists appear in a specific order when we want to sort them. So, this will allow us to sort the table anyway we want.
 ```js
 const tab = document.querySelector("#bhangra");
 ```
 ## Populating a table
 A function named populateTable is defined, which takes an array `arr` as its parameter. This function generates the table's content by iterating through the provided array and dynamically creating the table rows and cells to display artist information.
-```{filename="input.txt"}
+
+**HSW**:  The next code cell started off with `{filename="input.txt"}`, which is a leftover from what you copied from my site.  You probably wanted just `js`.  I made that change:
+
+```js
 function populateTable(arr) {
   let contents = "<tbody>";
   contents += `
@@ -35,33 +38,49 @@ function populateTable(arr) {
 ```
 
 ## Buttons for sorting
+
 The code defines three buttons with the respective IDs: "name-button", "date-button", and "random-button" using `querySelector`. Event listeners are attached to these buttons, specifying which sorting function should be executed when a button is clicked.
 
-`nameButton` triggers the `sortByName` function when clicked.
-`birthButton` triggers the `sortByBirthYear` function when clicked.
-`randomButton` triggers the `randomizeOrder` function when clicked.
+
+* `nameButton` triggers the `sortByName` function when clicked
+* `birthButton` triggers the `sortByBirthYear` function when clicked.
+* `randomButton` triggers the * `randomizeOrder` function when clicked.
 
 ## Sorting Function
+
 Three sorting functions:`sortByName`, `sortByBirthYear`, and `randomizeOder` are defined to sort the artist data by name, birth,year, and randomized. The functions use the sort method with to reorder the artist array. After sorting, the `populateTable` function is called to update the table with the sorted data.
 
-# Name Sorting
+
+
+### Name Sorting
+
  This function helps us put the artists in the right order by their names. It uses a tool called "sort" that can rearrange our list of artists. It looks at each artist's name and decides if it should come before or after another artist's name. If one name is greater (like coming later in the alphabet), it gets a number 1, which means it should come later in the sorted list. After sorting all the names, this function uses another function called "populateTable" to update the table and show the artists in alphabetical order.
+
 ```js
 function sortByName() {
   let sortedArray = arr.sort((a, b) => a.name > b.name ? 1 : -1);
   populateTable(sortedArray);
 }
 ```
-# Date sorting
+
+### Date sorting
+
 This function helps us arrange the artists by when they were born.  It looks at each artist's birth year and figures out if one artist was born later or earlier than another. If one artist was born later (meaning their year is bigger), it gets a number above zero, so it should come after the others. If their birth years are the same or if one was born earlier, it gets a number less than or equal to zero, so they should come earlier in the sorted list. After sorting, this function uses another function called "populateTable" to update the table and show the artists in the order of their birth years.
+
 ```js
 function sortByBirthYear() {
   let sortedArray = arr.sort((a, b) => a.birthYear - b.birthYear);
   populateTable(sortedArray);
 }
 ```
-# Randomize
- The function tells the computer to randomly decide where each artist should go. After shuffling, it uses another tool called "populateTable" to update the table and show the artists in a new random order.
+
+### Randomize
+
+The function tells the computer to randomly decide where each artist should go. After shuffling, it uses another tool called "populateTable" to update the table and show the artists in a new random order.
+
+
+
+```js
 function randomizeOrder() {
   let shuffledArray = arr.sort(() => Math.random() - 0.5);
   populateTable(shuffledArray);

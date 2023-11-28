@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../images/logo.jpeg" rel="icon" type="image/jpeg">
+<link href="../images/image0.jpg" rel="icon" type="image/jpeg">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -152,10 +152,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#finding-the-table" id="toc-finding-the-table" class="nav-link" data-scroll-target="#finding-the-table">Finding the Table</a></li>
   <li><a href="#populating-a-table" id="toc-populating-a-table" class="nav-link" data-scroll-target="#populating-a-table">Populating a table</a></li>
   <li><a href="#buttons-for-sorting" id="toc-buttons-for-sorting" class="nav-link" data-scroll-target="#buttons-for-sorting">Buttons for sorting</a></li>
-  <li><a href="#sorting-function" id="toc-sorting-function" class="nav-link" data-scroll-target="#sorting-function">Sorting Function</a></li>
+  <li><a href="#sorting-function" id="toc-sorting-function" class="nav-link" data-scroll-target="#sorting-function">Sorting Function</a>
+  <ul class="collapse">
   <li><a href="#name-sorting" id="toc-name-sorting" class="nav-link" data-scroll-target="#name-sorting">Name Sorting</a></li>
   <li><a href="#date-sorting" id="toc-date-sorting" class="nav-link" data-scroll-target="#date-sorting">Date sorting</a></li>
   <li><a href="#randomize" id="toc-randomize" class="nav-link" data-scroll-target="#randomize">Randomize</a></li>
+  </ul></li>
+  <li><a href="#full-code" id="toc-full-code" class="nav-link" data-scroll-target="#full-code">Full code</a></li>
   </ul>
 </nav>
     </div>
@@ -185,117 +188,125 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="finding-the-table" class="level2">
 <h2 class="anchored" data-anchor-id="finding-the-table">Finding the Table</h2>
-<p>The code begins by selecting a table element with the id “bhangra” using the <code>querySelector</code> method and assigns it to the variable tab. This table is where we’ll put all the information about the artists, and it’s where we’ll make the artists appear in a specific order when we want to sort them. So, this while allow us to sort the table anyway we want.</p>
+<p>The code begins by selecting a table element with the id “bhangra” using the <code>querySelector</code> method and assigns it to the variable tab. This table is where we’ll put all the information about the artists, and it’s where we’ll make the artists appear in a specific order when we want to sort them. So, this will allow us to sort the table anyway we want.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> tab <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#bhangra"</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="populating-a-table" class="level2">
 <h2 class="anchored" data-anchor-id="populating-a-table">Populating a table</h2>
 <p>A function named populateTable is defined, which takes an array <code>arr</code> as its parameter. This function generates the table’s content by iterating through the provided array and dynamically creating the table rows and cells to display artist information.</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>input.txt</strong></pre>
-</div>
-<pre><code>function populateTable(arr) {
-  let contents = "&lt;tbody&gt;";
-  contents += `
-    &lt;tr&gt;
-      &lt;th&gt;Name&lt;/th&gt;
-      &lt;th&gt;Year of Birth&lt;/th&gt;
-      &lt;th&gt;Link&lt;/th&gt;
-    &lt;/tr&gt;
-    `;
-  arr.forEach(artist =&gt; {
-    contents += "&lt;tr&gt;";
-    contents += `&lt;td&gt;${artist.name}&lt;/td&gt;`;
-    contents += `&lt;td&gt;${artist.birthYear}&lt;/td&gt;`;
-    contents += `&lt;td&gt;&lt;a href="${artist.link}" target="_blank"&gt;${artist.link}&lt;/a&gt;&lt;/td&gt;`;
-    contents += "&lt;/tr&gt;";
-  });
-  contents += "&lt;/tbody&gt;";
-  tab.innerHTML = contents;
-}</code></pre>
-</div>
+<p><strong>HSW</strong>: The next code cell started off with <code>{filename="input.txt"}</code>, which is a leftover from what you copied from my site. You probably wanted just <code>js</code>. I made that change:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">populateTable</span>(arr) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> contents <span class="op">=</span> <span class="st">"&lt;tbody&gt;"</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  contents <span class="op">+=</span> <span class="vs">`</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;tr&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;th&gt;Name&lt;/th&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;th&gt;Year of Birth&lt;/th&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;th&gt;Link&lt;/th&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/tr&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="vs">    `</span><span class="op">;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  arr<span class="op">.</span><span class="fu">forEach</span>(artist <span class="kw">=&gt;</span> {</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    contents <span class="op">+=</span> <span class="st">"&lt;tr&gt;"</span><span class="op">;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    contents <span class="op">+=</span> <span class="vs">`&lt;td&gt;</span><span class="sc">${</span>artist<span class="op">.</span><span class="at">name</span><span class="sc">}</span><span class="vs">&lt;/td&gt;`</span><span class="op">;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    contents <span class="op">+=</span> <span class="vs">`&lt;td&gt;</span><span class="sc">${</span>artist<span class="op">.</span><span class="at">birthYear</span><span class="sc">}</span><span class="vs">&lt;/td&gt;`</span><span class="op">;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    contents <span class="op">+=</span> <span class="vs">`&lt;td&gt;&lt;a href="</span><span class="sc">${</span>artist<span class="op">.</span><span class="at">link</span><span class="sc">}</span><span class="vs">" target="_blank"&gt;</span><span class="sc">${</span>artist<span class="op">.</span><span class="at">link</span><span class="sc">}</span><span class="vs">&lt;/a&gt;&lt;/td&gt;`</span><span class="op">;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    contents <span class="op">+=</span> <span class="st">"&lt;/tr&gt;"</span><span class="op">;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  contents <span class="op">+=</span> <span class="st">"&lt;/tbody&gt;"</span><span class="op">;</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  tab<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> contents<span class="op">;</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="buttons-for-sorting" class="level2">
 <h2 class="anchored" data-anchor-id="buttons-for-sorting">Buttons for sorting</h2>
 <p>The code defines three buttons with the respective IDs: “name-button”, “date-button”, and “random-button” using <code>querySelector</code>. Event listeners are attached to these buttons, specifying which sorting function should be executed when a button is clicked.</p>
-<p><code>nameButton</code> triggers the <code>sortByName</code> function when clicked. <code>birthButton</code> triggers the <code>sortByBirthYear</code> function when clicked. <code>randomButton</code> triggers the <code>randomizeOrder</code> function when clicked.</p>
+<ul>
+<li><code>nameButton</code> triggers the <code>sortByName</code> function when clicked</li>
+<li><code>birthButton</code> triggers the <code>sortByBirthYear</code> function when clicked.</li>
+<li><code>randomButton</code> triggers the * <code>randomizeOrder</code> function when clicked.</li>
+</ul>
 </section>
 <section id="sorting-function" class="level2">
 <h2 class="anchored" data-anchor-id="sorting-function">Sorting Function</h2>
 <p>Three sorting functions:<code>sortByName</code>, <code>sortByBirthYear</code>, and <code>randomizeOder</code> are defined to sort the artist data by name, birth,year, and randomized. The functions use the sort method with to reorder the artist array. After sorting, the <code>populateTable</code> function is called to update the table with the sorted data.</p>
-</section>
-<section id="name-sorting" class="level1">
-<h1>Name Sorting</h1>
+<section id="name-sorting" class="level3">
+<h3 class="anchored" data-anchor-id="name-sorting">Name Sorting</h3>
 <p>This function helps us put the artists in the right order by their names. It uses a tool called “sort” that can rearrange our list of artists. It looks at each artist’s name and decides if it should come before or after another artist’s name. If one name is greater (like coming later in the alphabet), it gets a number 1, which means it should come later in the sorted list. After sorting all the names, this function uses another function called “populateTable” to update the table and show the artists in alphabetical order.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sortByName</span>() {</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> sortedArray <span class="op">=</span> arr<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">name</span> <span class="op">&gt;</span> b<span class="op">.</span><span class="at">name</span> <span class="op">?</span> <span class="dv">1</span> <span class="op">:</span> <span class="op">-</span><span class="dv">1</span>)<span class="op">;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">populateTable</span>(sortedArray)<span class="op">;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="date-sorting" class="level1">
-<h1>Date sorting</h1>
+<section id="date-sorting" class="level3">
+<h3 class="anchored" data-anchor-id="date-sorting">Date sorting</h3>
 <p>This function helps us arrange the artists by when they were born. It looks at each artist’s birth year and figures out if one artist was born later or earlier than another. If one artist was born later (meaning their year is bigger), it gets a number above zero, so it should come after the others. If their birth years are the same or if one was born earlier, it gets a number less than or equal to zero, so they should come earlier in the sorted list. After sorting, this function uses another function called “populateTable” to update the table and show the artists in the order of their birth years.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sortByBirthYear</span>() {</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> sortedArray <span class="op">=</span> arr<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">birthYear</span> <span class="op">-</span> b<span class="op">.</span><span class="at">birthYear</span>)<span class="op">;</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">populateTable</span>(sortedArray)<span class="op">;</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="randomize" class="level1">
-<h1>Randomize</h1>
-<p>The function tells the computer to randomly decide where each artist should go. After shuffling, it uses another tool called “populateTable” to update the table and show the artists in a new random order. function randomizeOrder() { let shuffledArray = arr.sort(() =&gt; Math.random() - 0.5); populateTable(shuffledArray); }</p>
-<pre><code>
-## Full code
-
-```{.javascript filename="table-sort.js"}
-
-const tab = document.querySelector("#bhangra");
-
-
-populateTable(arr = artists);
-
-const nameButton = document.querySelector("#name-button");
-const birthButton = document.querySelector("#date-button");
-const randomizeButton = document.querySelector("#random-button");
-
-nameButton.addEventListener("click", sortByName);
-birthButton.addEventListener("click", sortByBirthYear);
-randomizeButton.addEventListener("click", randomizeOrder);
-
-function sortByName() {
-  let sortedArray = arr.sort((a, b) =&gt; a.name &gt; b.name ? 1 : -1);
-  populateTable(sortedArray);
-}
-
-function sortByBirthYear() {
-  let sortedArray = arr.sort((a, b) =&gt; a.birthYear - b.birthYear);
-  populateTable(sortedArray);
-}
-
-function randomizeOrder() {
-  let shuffledArray = arr.sort(() =&gt; Math.random() - 0.5);
-  populateTable(shuffledArray);
-}
-
-function populateTable(arr) {
-  let contents = "&lt;tbody&gt;";
-  contents += `
-    &lt;tr&gt;
-      &lt;th&gt;Name&lt;/th&gt;
-      &lt;th&gt;Year of Birth&lt;/th&gt;
-      &lt;th&gt;Link&lt;/th&gt;
-    &lt;/tr&gt;
-    `;
-  arr.forEach(artist =&gt; {
-    contents += "&lt;tr&gt;";
-    contents += `&lt;td&gt;${artist.name}&lt;/td&gt;`;
-    contents += `&lt;td&gt;${artist.birthYear}&lt;/td&gt;`;
-    contents += `&lt;td&gt;&lt;a href="${artist.link}" target="_blank"&gt;${artist.link}&lt;/a&gt;&lt;/td&gt;`;
-    contents += "&lt;/tr&gt;";
-  });
-  contents += "&lt;/tbody&gt;";
-  tab.innerHTML = contents;
-}</code></pre>
+<section id="randomize" class="level3">
+<h3 class="anchored" data-anchor-id="randomize">Randomize</h3>
+<p>The function tells the computer to randomly decide where each artist should go. After shuffling, it uses another tool called “populateTable” to update the table and show the artists in a new random order.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">randomizeOrder</span>() {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> shuffledArray <span class="op">=</span> arr<span class="op">.</span><span class="fu">sort</span>(() <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>() <span class="op">-</span> <span class="fl">0.5</span>)<span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">populateTable</span>(shuffledArray)<span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="full-code" class="level2">
+<h2 class="anchored" data-anchor-id="full-code">Full code</h2>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>table-sort.js</strong></pre>
+</div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> tab <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#bhangra"</span>)<span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">populateTable</span>(arr <span class="op">=</span> artists)<span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> nameButton <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#name-button"</span>)<span class="op">;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> birthButton <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#date-button"</span>)<span class="op">;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> randomizeButton <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#random-button"</span>)<span class="op">;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>nameButton<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"click"</span><span class="op">,</span> sortByName)<span class="op">;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>birthButton<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"click"</span><span class="op">,</span> sortByBirthYear)<span class="op">;</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>randomizeButton<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"click"</span><span class="op">,</span> randomizeOrder)<span class="op">;</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sortByName</span>() {</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> sortedArray <span class="op">=</span> arr<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">name</span> <span class="op">&gt;</span> b<span class="op">.</span><span class="at">name</span> <span class="op">?</span> <span class="dv">1</span> <span class="op">:</span> <span class="op">-</span><span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">populateTable</span>(sortedArray)<span class="op">;</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sortByBirthYear</span>() {</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> sortedArray <span class="op">=</span> arr<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">birthYear</span> <span class="op">-</span> b<span class="op">.</span><span class="at">birthYear</span>)<span class="op">;</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">populateTable</span>(sortedArray)<span class="op">;</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">randomizeOrder</span>() {</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> shuffledArray <span class="op">=</span> arr<span class="op">.</span><span class="fu">sort</span>(() <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>() <span class="op">-</span> <span class="fl">0.5</span>)<span class="op">;</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">populateTable</span>(shuffledArray)<span class="op">;</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">populateTable</span>(arr) {</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> contents <span class="op">=</span> <span class="st">"&lt;tbody&gt;"</span><span class="op">;</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>  contents <span class="op">+=</span> <span class="vs">`</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;tr&gt;</span></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;th&gt;Name&lt;/th&gt;</span></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;th&gt;Year of Birth&lt;/th&gt;</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;th&gt;Link&lt;/th&gt;</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/tr&gt;</span></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a><span class="vs">    `</span><span class="op">;</span></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>  arr<span class="op">.</span><span class="fu">forEach</span>(artist <span class="kw">=&gt;</span> {</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>    contents <span class="op">+=</span> <span class="st">"&lt;tr&gt;"</span><span class="op">;</span></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>    contents <span class="op">+=</span> <span class="vs">`&lt;td&gt;</span><span class="sc">${</span>artist<span class="op">.</span><span class="at">name</span><span class="sc">}</span><span class="vs">&lt;/td&gt;`</span><span class="op">;</span></span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>    contents <span class="op">+=</span> <span class="vs">`&lt;td&gt;</span><span class="sc">${</span>artist<span class="op">.</span><span class="at">birthYear</span><span class="sc">}</span><span class="vs">&lt;/td&gt;`</span><span class="op">;</span></span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>    contents <span class="op">+=</span> <span class="vs">`&lt;td&gt;&lt;a href="</span><span class="sc">${</span>artist<span class="op">.</span><span class="at">link</span><span class="sc">}</span><span class="vs">" target="_blank"&gt;</span><span class="sc">${</span>artist<span class="op">.</span><span class="at">link</span><span class="sc">}</span><span class="vs">&lt;/a&gt;&lt;/td&gt;`</span><span class="op">;</span></span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>    contents <span class="op">+=</span> <span class="st">"&lt;/tr&gt;"</span><span class="op">;</span></span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>  contents <span class="op">+=</span> <span class="st">"&lt;/tbody&gt;"</span><span class="op">;</span></span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>  tab<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> contents<span class="op">;</span></span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>
