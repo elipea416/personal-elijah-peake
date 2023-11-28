@@ -7,8 +7,41 @@ date: "2023-11-10"
 categories: [blabber, substantive]
 image: banner.jpg
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In est ante in nibh mauris cursus mattis molestie. Sed euismod nisi porta lorem. Nec dui nunc mattis enim ut tellus elementum sagittis vitae. Morbi tincidunt augue interdum velit euismod. Hac habitasse platea dictumst quisque. Ut tortor pretium viverra suspendisse potenti nullam ac. Nisl nisi scelerisque eu ultrices vitae auctor. Accumsan in nisl nisi scelerisque eu ultrices. Cras semper auctor neque vitae tempus quam pellentesque. Tincidunt eget nullam non nisi est sit amet facilisis magna. Id venenatis a condimentum vitae sapien. Amet cursus sit amet dictum sit. Arcu cursus euismod quis viverra. Quam adipiscing vitae proin sagittis nisl rhoncus. Lobortis elementum nibh tellus molestie nunc non. Arcu non sodales neque sodales ut. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Dui sapien eget mi proin sed libero enim sed.
 
-Quis hendrerit dolor magna eget est. Tincidunt praesent semper feugiat nibh. Neque sodales ut etiam sit amet nisl purus in. Turpis egestas integer eget aliquet nibh praesent tristique magna. Ipsum dolor sit amet consectetur adipiscing elit. Enim neque volutpat ac tincidunt vitae. Porttitor leo a diam sollicitudin tempor id eu nisl. Viverra nam libero justo laoreet sit amet. Tristique senectus et netus et malesuada fames ac. Molestie a iaculis at erat pellentesque adipiscing. Aliquam purus sit amet luctus venenatis lectus magna fringilla. Libero nunc consequat interdum varius sit amet mattis vulputate enim. Suspendisse interdum consectetur libero id. Porttitor eget dolor morbi non arcu risus quis. Sit amet purus gravida quis blandit turpis. In tellus integer feugiat scelerisque varius morbi enim nunc faucibus. Viverra suspendisse potenti nullam ac. Proin fermentum leo vel orci porta non. Velit euismod in pellentesque massa.
+# Examining SNAP: Its History, Impact, and Ongoing Controversies
 
-Ultrices sagittis orci a scelerisque purus semper. Tortor condimentum lacinia quis vel eros donec. Turpis nunc eget lorem dolor sed. Urna et pharetra pharetra massa massa ultricies mi quis. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Id diam vel quam elementum. Sagittis id consectetur purus ut faucibus pulvinar elementum integer enim. Ridiculus mus mauris vitae ultricies leo integer. Quam quisque id diam vel quam. Posuere urna nec tincidunt praesent semper feugiat. Ac tortor dignissim convallis aenean et. Eget mi proin sed libero enim sed faucibus turpis in. Vestibulum sed arcu non odio. Aliquet nibh praesent tristique magna sit.
+**Elijah Peake**  
+**POS 100**  
+**Professor Scheier**  
+**1 May 2023**
+
+The Supplemental Nutrition Assistance Program (SNAP), commonly known as food stamps, is a government-funded program aimed at helping low-income individuals and families purchase food. SNAP provides eligible households with an electronic benefits transfer card (EBT) that can be used to purchase food items at authorized retailers. The program was first established in 1964, and it has since grown to become the largest nutrition assistance program in the United States, providing support to millions of people each year. While SNAP has been a subject of controversy and debate, its impact on reducing hunger and improving nutrition for low-income individuals cannot be ignored. This essay will examine the history and current state of SNAP, its impact on individuals and communities, and the ongoing debates surrounding its funding and administration.
+
+## Importance of SNAP
+
+SNAP is crucial as it offers support to struggling families to purchase food, reducing hunger by enabling them to buy essential items such as meat, fruit, and vegetables. However, the program has been a subject of controversy due to critics arguing about its costliness and fostering dependency on the government. They emphasize the need for stricter oversight to prevent fraud and abuse.
+
+## Support for SNAP
+
+I believe SNAP is immensely beneficial to many families in the U.S., and we should continue supporting the policy. Currently, SNAP aids over 47 million participants in approximately 23 million low-income households each month, constituting about 14 percent of the U.S. population. Removing this policy would significantly impact lower-income families, potentially leading to hunger among children, the elderly, and the disabled who rely on this program.
+
+## History and Evolution of SNAP
+
+Originally established in 1964 as part of President Johnson's War on Poverty, the program, initially known as The Food Stamp Act, aimed to provide temporary assistance to those facing financial hardship. Over time, it evolved to supplement household food budgets rather than substitute for them, aiming to enhance nutrition among low-income individuals while supporting the agricultural economy.
+
+## Impact of SNAP
+
+SNAP has significantly reduced hunger and improved nutrition among low-income families. It has enabled these families to afford food without worrying about the source of their next meal. Additionally, the program positively impacts the economy by providing swift support to local economies and enhancing the quality of diets by allowing families to purchase nutritious foods they couldn't otherwise afford.
+
+## Pros and Cons of SNAP
+
+While SNAP has its benefits, there are concerns about misuse and excessive spending. Some recipients spend a considerable portion of their benefits on junk food and soda, deviating from the program's intended purpose of promoting healthier eating. Moreover, the program's substantial cost has been a point of contention among critics who advocate for reallocating funds to other areas in need.
+
+## Controversies and Debates
+
+The SNAP debate encompasses two sides: one advocating for better funding to support Americans' access to nutritious food, primarily supported by Democrats, and the other aiming to make SNAP eligibility stricter and reduce its funding, typically supported by Republicans. While I support the program's utility for families in need, I believe able-bodied individuals should contribute via work requirements to prevent misuse.
+
+## Conclusion
+
+In conclusion, SNAP has played a vital role in alleviating hunger and improving nutrition among low-income individuals and families since its inception. Despite ongoing controversies, the benefits of SNAP outweigh the cons. It's a critical program supporting families struggling to afford food, contributing to the economy, and enhancing diets. It's imperative to continue supporting and enhancing this program to ensure widespread access to nutritious food for all.
+
