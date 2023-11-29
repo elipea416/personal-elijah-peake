@@ -5,7 +5,7 @@ project:
 website:
   title: "Elijah Peake's Website Warmup"
   site-path: "/warmup-elijah-peake/"
-  favicon: images/image0.jpg
+  favicon: images/image0.jpeg
   navbar:
     left:
       - href: index.qmd

@@ -2,11 +2,11 @@
 title: Major Enhancement
 ---
 
-The major enhancement I decided to do was to customize my css files. The changes that i made include making a custome theme for my navbar as well as changing how the words look.
+The major enhancement I decided to do was to customize my css files. The changes that i made include making a custome theme for my navbar as well as changing how the words look and making a menu for my articles and blog.
 
 ## The Color for the navbar
 
-The color I chose for thr navbar was a shade of red.
+The color I chose for the navbar was a shade of red. I chose the color using rgb values which allowed me to pick the specific color of red that I wanted.
 
 ```.js
 .navbar {
@@ -19,10 +19,9 @@ The code below modifies the words on the navbar.
 
 ```.js
 .navbar {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Arial';
   font-weight: bold;
   font-style: italic;
-  font-weight: normal;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -74,5 +73,3 @@ The drop down menu allows for easy access to pages on the website and helps to k
             text: "Larum Ipsum 3"
 ```
 I added `menu` into the `quarto.yml`under the `blog` and `articles` section in order to make the drop down menus. Doing this makes a drop down menu when you click on either blog or Articles.
-
-

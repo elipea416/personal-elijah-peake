@@ -125,10 +125,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../articles/index.html" rel="" target="">
- <span class="menu-text">Articles</span></a>
-  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-articles" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Articles</span>
@@ -228,10 +224,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>The major enhancement I decided to do was to customize my css files. The changes that i made include making a custome theme for my navbar as well as changing how the words look.</p>
+<p>The major enhancement I decided to do was to customize my css files. The changes that i made include making a custome theme for my navbar as well as changing how the words look and making a menu for my articles and blog.</p>
 <section id="the-color-for-the-navbar" class="level2">
 <h2 class="anchored" data-anchor-id="the-color-for-the-navbar">The Color for the navbar</h2>
-<p>The color I chose for thr navbar was a shade of red.</p>
+<p>The color I chose for the navbar was a shade of red. I chose the color using rgb values which allowed me to pick the specific color of red that I wanted.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="at">navbar</span> {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  background<span class="op">-</span><span class="dt">color</span><span class="op">:</span> <span class="fu">rgb</span>(<span class="dv">184</span><span class="op">,</span> <span class="dv">29</span><span class="op">,</span> <span class="dv">81</span>)<span class="op">;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -240,13 +236,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="the-styling-for-the-navbar">The styling for the navbar</h2>
 <p>The code below modifies the words on the navbar.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode .js code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="at">navbar</span> {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  font<span class="op">-</span><span class="dt">family</span><span class="op">:</span> <span class="st">'Arial'</span><span class="op">,</span> sans<span class="op">-</span>serif<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  font<span class="op">-</span><span class="dt">family</span><span class="op">:</span> <span class="st">'Arial'</span><span class="op">;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  font<span class="op">-</span><span class="dt">weight</span><span class="op">:</span> bold<span class="op">;</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  font<span class="op">-</span><span class="dt">style</span><span class="op">:</span> italic<span class="op">;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  font<span class="op">-</span><span class="dt">weight</span><span class="op">:</span> normal<span class="op">;</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  font<span class="op">-</span><span class="dt">size</span><span class="op">:</span> <span class="dv">16</span><span class="er">px</span><span class="op">;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  line<span class="op">-</span><span class="dt">height</span><span class="op">:</span> <span class="fl">1.5</span><span class="op">;</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  font<span class="op">-</span><span class="dt">size</span><span class="op">:</span> <span class="dv">16</span><span class="er">px</span><span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  line<span class="op">-</span><span class="dt">height</span><span class="op">:</span> <span class="fl">1.5</span><span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li><code>font-family</code>- This code changes the font for the text to Arial.</li>
 <li><code>font-weight</code> - Changes the text to become bold</li>
