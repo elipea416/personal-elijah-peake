@@ -5,7 +5,6 @@ author:
     - Elijah Peake
 date: "2023-11-14"
 categories: [Art]
-image: banner.jpg
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae justo eget magna fermentum iaculis. Sed pulvinar proin gravida hendrerit. Pellentesque dignissim enim sit amet venenatis. Posuere lorem ipsum dolor sit. Eget nullam non nisi est sit amet facilisis magna. Proin sed libero enim sed faucibus. At varius vel pharetra vel. Felis eget nunc lobortis mattis aliquam. Eu augue ut lectus arcu bibendum at.

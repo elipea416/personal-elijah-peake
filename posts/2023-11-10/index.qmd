@@ -5,7 +5,6 @@ author:
     - Elijah Peake
 date: "2023-11-10"
 categories: [Politics, substantive]
-image: banner.jpg
 ---
 
 

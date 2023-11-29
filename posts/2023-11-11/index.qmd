@@ -4,8 +4,7 @@ description: "Minor enhancement Icon"
 author:
     - Elijah Peake
 date: "2023-11-11"
-categories: [blabber, substantive]
-image: banner.jpg
+categories: [Computer Science, substantive]
 ---
 
 # Intro
