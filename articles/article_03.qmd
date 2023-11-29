@@ -33,3 +33,15 @@ The code below modifies the words on the navbar.
 * `font-size` - changes the font size so it becomes 16 pixels
 * `line-height` - defines the space between the navbar and the text
 
+# Underlining and Alignment 
+
+```.js
+.navbar{
+  text-decoration: underline; 
+  text-align: left;
+}
+```
+
+* `text-decoration: underline`- This adds an underline to the text in the navbar.
+* ` text-align: left;`- This aligns all of the text in the navbar to the left
+
