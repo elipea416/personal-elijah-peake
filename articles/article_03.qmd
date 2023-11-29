@@ -45,3 +45,34 @@ The code below modifies the words on the navbar.
 * `text-decoration: underline`- This adds an underline to the text in the navbar.
 * ` text-align: left;`- This aligns all of the text in the navbar to the left
 
+## Drop down Menu
+The drop down menu allows for easy access to pages on the website and helps to keep things better organized and clean. Implementing the drop down menu looks something like this.
+```.js
+ - text: Articles
+        menu:
+          - href: articles/index.qmd
+            text: "Articles"
+          - href: articles/article_01.qmd
+            text: "Making a table"
+          - href: articles/article_02.qmd
+            text: "Sorting a table"
+          - href: articles/article_03.qmd
+            text: "Major Enhancement"
+      - text: Blog
+        menu: 
+          - href: posts/index.qmd
+            text: "Blog"
+          - href: posts/2023-11-10
+            text: "Benefits of Snap"
+          - href: posts/2023-11-11
+            text: "Favicon minor enhancement"
+          - href: posts/2023-11-12
+            text: "Larum Ipsum 1"
+          - href: posts/2023-11-13
+            text: "Larum Ipsum 2"
+          - href: posts/2023-11-14
+            text: "Larum Ipsum 3"
+```
+I added `menu` into the `quarto.yml` in order to make the drop down menus. 
+
+
