@@ -1,2 +1,14 @@
 /* css styles */
 
+ .navbar {
+  background-color: rgb(184, 29, 81);
+}
+
+.navbar{
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5; 
+}
