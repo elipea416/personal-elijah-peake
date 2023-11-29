@@ -4,6 +4,7 @@ title: Major Enhancement
 
 The major enhancement I decided to do was to customize my css files. The changes that i made include making a custome theme for my navbar as well as changing how the words look and making a menu for my articles and blog.
 
+
 ## The Color for the navbar
 
 The color I chose for the navbar was a shade of red. I chose the color using rgb values which allowed me to pick the specific color of red that I wanted.
@@ -13,6 +14,11 @@ The color I chose for the navbar was a shade of red. I chose the color using rgb
   background-color: rgb(184, 29, 81);
 }
 ```
+<a href = https://quarto.org/docs/output-formats/html-themes.html#basic-options
+Background Color
+</a>
+
+
 
 ## The styling for the navbar
 The code below modifies the words on the navbar.
@@ -26,11 +32,27 @@ The code below modifies the words on the navbar.
   line-height: 1.5;
 }
 ```
-* `font-family`- This code changes the font for the text to Arial.
-* `font-weight` - Changes the text to become bold
-* `font-style` - Changes the text so it becomes italicied
-* `font-size` - changes the font size so it becomes 16 pixels
-* `line-height` - defines the space between the navbar and the text
+* `font-family`
+ This code changes the font for the text to Arial.
+<a href = https://quarto.org/docs/output-formats/html-themes.html#basic-options
+Background Color
+</a>
+
+* `font-weight` 
+ Changes the navbar text to become bold.
+
+* `font-style` 
+ Changes the text so it becomes italicized.
+
+* `font-size` 
+ Changes the font size so it becomes 16 pixels.
+<a href = https://quarto.org/docs/websites/website-navigation.html>
+Font Size
+</a>
+
+* `line-height` 
+ Defines the space between the navbar and the text.
+
 
 # Underlining and Alignment 
 
@@ -41,8 +63,12 @@ The code below modifies the words on the navbar.
 }
 ```
 
-* `text-decoration: underline`- This adds an underline to the text in the navbar.
-* ` text-align: left;`- This aligns all of the text in the navbar to the left
+* `text-decoration: underline`
+ This adds an underline to the text in the navbar.
+
+* ` text-align: left;`
+ This aligns all of the text in the navbar to the left
+
 
 ## Drop down Menu
 The drop down menu allows for easy access to pages on the website and helps to keep things better organized and clean. Implementing the drop down menu looks something like this.
@@ -73,3 +99,7 @@ The drop down menu allows for easy access to pages on the website and helps to k
             text: "Larum Ipsum 3"
 ```
 I added `menu` into the `quarto.yml`under the `blog` and `articles` section in order to make the drop down menus. Doing this makes a drop down menu when you click on either blog or Articles.
+
+<a href = https://quarto.org/docs/websites/website-navigation.html>
+Menu Help
+</a>

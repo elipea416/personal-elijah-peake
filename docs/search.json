@@ -39,21 +39,21 @@
     "href": "articles/article_03.html#the-color-for-the-navbar",
     "title": "Major Enhancement",
     "section": "The Color for the navbar",
-    "text": "The Color for the navbar\nThe color I chose for the navbar was a shade of red. I chose the color using rgb values which allowed me to pick the specific color of red that I wanted.\n.navbar {\n  background-color: rgb(184, 29, 81);\n}"
+    "text": "The Color for the navbar\nThe color I chose for the navbar was a shade of red. I chose the color using rgb values which allowed me to pick the specific color of red that I wanted.\n.navbar {\n  background-color: rgb(184, 29, 81);\n}\n&lt;a href = https://quarto.org/docs/output-formats/html-themes.html#basic-options Background Color"
   },
   {
     "objectID": "articles/article_03.html#the-styling-for-the-navbar",
     "href": "articles/article_03.html#the-styling-for-the-navbar",
     "title": "Major Enhancement",
     "section": "The styling for the navbar",
-    "text": "The styling for the navbar\nThe code below modifies the words on the navbar.\n.navbar {\n  font-family: 'Arial';\n  font-weight: bold;\n  font-style: italic;\n  font-size: 16px;\n  line-height: 1.5;\n}\n\nfont-family- This code changes the font for the text to Arial.\nfont-weight - Changes the text to become bold\nfont-style - Changes the text so it becomes italicied\nfont-size - changes the font size so it becomes 16 pixels\nline-height - defines the space between the navbar and the text"
+    "text": "The styling for the navbar\nThe code below modifies the words on the navbar.\n.navbar {\n  font-family: 'Arial';\n  font-weight: bold;\n  font-style: italic;\n  font-size: 16px;\n  line-height: 1.5;\n}\n\nfont-family This code changes the font for the text to Arial. &lt;a href = https://quarto.org/docs/output-formats/html-themes.html#basic-options Background Color \nfont-weight Changes the navbar text to become bold.\nfont-style Changes the text so it becomes italicized.\nfont-size Changes the font size so it becomes 16 pixels.  Font Size \nline-height Defines the space between the navbar and the text."
   },
   {
     "objectID": "articles/article_03.html#drop-down-menu",
     "href": "articles/article_03.html#drop-down-menu",
     "title": "Major Enhancement",
     "section": "Drop down Menu",
-    "text": "Drop down Menu\nThe drop down menu allows for easy access to pages on the website and helps to keep things better organized and clean. Implementing the drop down menu looks something like this.\n - text: Articles\n        menu:\n          - href: articles/index.qmd\n            text: \"Articles\"\n          - href: articles/article_01.qmd\n            text: \"Making a table\"\n          - href: articles/article_02.qmd\n            text: \"Sorting a table\"\n          - href: articles/article_03.qmd\n            text: \"Major Enhancement\"\n      - text: Blog\n        menu: \n          - href: posts/index.qmd\n            text: \"Blog\"\n          - href: posts/2023-11-10\n            text: \"Benefits of Snap\"\n          - href: posts/2023-11-11\n            text: \"Favicon minor enhancement\"\n          - href: posts/2023-11-12\n            text: \"Larum Ipsum 1\"\n          - href: posts/2023-11-13\n            text: \"Larum Ipsum 2\"\n          - href: posts/2023-11-14\n            text: \"Larum Ipsum 3\"\nI added menu into the quarto.ymlunder the blog and articles section in order to make the drop down menus. Doing this makes a drop down menu when you click on either blog or Articles."
+    "text": "Drop down Menu\nThe drop down menu allows for easy access to pages on the website and helps to keep things better organized and clean. Implementing the drop down menu looks something like this.\n - text: Articles\n        menu:\n          - href: articles/index.qmd\n            text: \"Articles\"\n          - href: articles/article_01.qmd\n            text: \"Making a table\"\n          - href: articles/article_02.qmd\n            text: \"Sorting a table\"\n          - href: articles/article_03.qmd\n            text: \"Major Enhancement\"\n      - text: Blog\n        menu: \n          - href: posts/index.qmd\n            text: \"Blog\"\n          - href: posts/2023-11-10\n            text: \"Benefits of Snap\"\n          - href: posts/2023-11-11\n            text: \"Favicon minor enhancement\"\n          - href: posts/2023-11-12\n            text: \"Larum Ipsum 1\"\n          - href: posts/2023-11-13\n            text: \"Larum Ipsum 2\"\n          - href: posts/2023-11-14\n            text: \"Larum Ipsum 3\"\nI added menu into the quarto.ymlunder the blog and articles section in order to make the drop down menus. Doing this makes a drop down menu when you click on either blog or Articles.\n Menu Help"
   },
   {
     "objectID": "articles/article_01.html",
