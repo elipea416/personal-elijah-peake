@@ -2,3 +2,34 @@
 title: Major Enhancement
 ---
 
+The major enhancement I decided to do was to customize my css files. The changes that i made include making a custome theme for my navbar as well as changing how the words look.
+
+## The Color for the navbar
+
+The color I chose for thr navbar was a shade of red.
+
+```.js
+.navbar {
+  background-color: rgb(184, 29, 81);
+}
+```
+
+## The styling for the navbar
+The code below modifies the words on the navbar.
+
+```.js
+.navbar {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5;
+}
+```
+* `font-family`- This code changes the font for the text to Arial.
+* `font-weight` - Changes the text to become bold
+* `font-style` - Changes the text so it becomes italicied
+* `font-size` - changes the font size so it becomes 16 pixels
+* `line-height` - defines the space between the navbar and the text
+

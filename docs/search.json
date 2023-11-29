@@ -28,6 +28,27 @@
     "text": "Introducing my warmup website. This site is for an assignment in the CSC324 class at Georgetown College."
   },
   {
+    "objectID": "articles/article_03.html",
+    "href": "articles/article_03.html",
+    "title": "Major Enhancement",
+    "section": "",
+    "text": "The major enhancement I decided to do was to customize my css files. The changes that i made include making a custome theme for my navbar as well as changing how the words look."
+  },
+  {
+    "objectID": "articles/article_03.html#the-color-for-the-navbar",
+    "href": "articles/article_03.html#the-color-for-the-navbar",
+    "title": "Major Enhancement",
+    "section": "The Color for the navbar",
+    "text": "The Color for the navbar\nThe color I chose for thr navbar was a shade of red.\n.navbar {\n  background-color: rgb(184, 29, 81);\n}"
+  },
+  {
+    "objectID": "articles/article_03.html#the-styling-for-the-navbar",
+    "href": "articles/article_03.html#the-styling-for-the-navbar",
+    "title": "Major Enhancement",
+    "section": "The styling for the navbar",
+    "text": "The styling for the navbar\nThe code below modifies the words on the navbar.\n.navbar {\n  font-family: 'Arial', sans-serif;\n  font-weight: bold;\n  font-style: italic;\n  font-weight: normal;\n  font-size: 16px;\n  line-height: 1.5;\n}\n\nfont-family- This code changes the font for the text to Arial.\nfont-weight - Changes the text to become bold\nfont-style - Changes the text so it becomes italicied\nfont-size - changes the font size so it becomes 16 pixels\nline-height - defines the space between the navbar and the text"
+  },
+  {
     "objectID": "articles/article_01.html",
     "href": "articles/article_01.html",
     "title": "Making a Table",
