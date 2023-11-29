@@ -12,7 +12,6 @@ website:
         text: Home
       - href: about.qmd
         text: About 
-      - href: articles/index.qmd
       - text: Articles
         menu:
           - href: articles/index.qmd
