@@ -2,4 +2,4 @@
 title: "Hello!"
 ---
 
-Introducing my warmup website. This site is for an assignment in the CSC324 class at Georgetown College.
+Introducing my Personal website. This site is for an assignment in the CSC324 class at Georgetown College.
