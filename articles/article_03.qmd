@@ -73,6 +73,6 @@ The drop down menu allows for easy access to pages on the website and helps to k
           - href: posts/2023-11-14
             text: "Larum Ipsum 3"
 ```
-I added `menu` into the `quarto.yml` in order to make the drop down menus. 
+I added `menu` into the `quarto.yml`under the `blog` and `articles` section in order to make the drop down menus. Doing this makes a drop down menu when you click on either blog or Articles.
 
 

@@ -236,5 +236,12 @@
     "title": "Lorem ipsum #3",
     "section": "",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae justo eget magna fermentum iaculis. Sed pulvinar proin gravida hendrerit. Pellentesque dignissim enim sit amet venenatis. Posuere lorem ipsum dolor sit. Eget nullam non nisi est sit amet facilisis magna. Proin sed libero enim sed faucibus. At varius vel pharetra vel. Felis eget nunc lobortis mattis aliquam. Eu augue ut lectus arcu bibendum at."
+  },
+  {
+    "objectID": "articles/article_03.html#drop-down-menu",
+    "href": "articles/article_03.html#drop-down-menu",
+    "title": "Major Enhancement",
+    "section": "Drop down Menu",
+    "text": "Drop down Menu\nThe drop down menu allows for easy access to pages on the website and helps to keep things better organized and clean. Implementing the drop down menu looks something like this.\n - text: Articles\n        menu:\n          - href: articles/index.qmd\n            text: \"Articles\"\n          - href: articles/article_01.qmd\n            text: \"Making a table\"\n          - href: articles/article_02.qmd\n            text: \"Sorting a table\"\n          - href: articles/article_03.qmd\n            text: \"Major Enhancement\"\n      - text: Blog\n        menu: \n          - href: posts/index.qmd\n            text: \"Blog\"\n          - href: posts/2023-11-10\n            text: \"Benefits of Snap\"\n          - href: posts/2023-11-11\n            text: \"Favicon minor enhancement\"\n          - href: posts/2023-11-12\n            text: \"Larum Ipsum 1\"\n          - href: posts/2023-11-13\n            text: \"Larum Ipsum 2\"\n          - href: posts/2023-11-14\n            text: \"Larum Ipsum 3\"\nI added menu into the quarto.ymlunder the blog and articles section in order to make the drop down menus. Doing this makes a drop down menu when you click on either blog or Articles."
   }
 ]
